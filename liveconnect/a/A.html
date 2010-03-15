@@ -17,7 +17,7 @@ textarea {
 
 function $(_) { return document.getElementById(_); }
 function map(f) { for(var i = 0, a = [], l = this.length; i < l; i++) { a.push(f(this[i], i, this)); } return a; }
-function dump(bytes) { return map.call(bytes, function(n) { return (n & 0xFF).toString(16).toUpperCase(); }).join(" "); }
+function dump(bytes) { return map.call(bytes, function(n) { return ("0" + (n & 0xFF).toString(16).toUpperCase()).slice(-2); }).join(" "); }
 function parse(str)  { return map.call(str.split(/\s+|\s*,\s*/), function(n) { return parseInt(n, 16); }); }
 function list(arrayLike)  { return map.call(arrayLike, function(n) { return n; }).join("\n"); }
 function trace(ele, e) { ele.value = e.getStackTrace ? list(e.getStackTrace()) : e.toString(); }
