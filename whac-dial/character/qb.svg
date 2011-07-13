@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="640"
+   viewBox="0 0 1024 640"
+   preserveAspectRatio="xMidYMin meet"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="akabe.svg"
+   style="enable-background:new">
+  <title
+     id="title3019">Whac a Gohst</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3769">
+      <stop
+         style="stop-color:#89a0ff;stop-opacity:1"
+         offset="0"
+         id="stop3771" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop3773" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3861">
+      <stop
+         style="stop-color:#42a611;stop-opacity:1;"
+         offset="0"
+         id="stop3863" />
+      <stop
+         style="stop-color:#53cf11;stop-opacity:1"
+         offset="1"
+         id="stop3865" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3861"
+       id="linearGradient3867"
+       x1="2"
+       y1="721.36218"
+       x2="2"
+       y2="366.36218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1870669,0,0,0.41450777,-4.374134,573.04113)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3769"
+       id="linearGradient3775"
+       x1="2"
+       y1="-1.6378175"
+       x2="2"
+       y2="291.36218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.187067,0,0,0.71748879,-4.374134,413.53733)" />
+    <filter
+       id="filter4541"
+       inkscape:label="Drop shadow"
+       width="1.5"
+       height="1.5"
+       x="-.25"
+       y="-.25">
+      <feGaussianBlur
+         id="feGaussianBlur4543"
+         in="SourceAlpha"
+         stdDeviation="2"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix4545"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0 " />
+      <feOffset
+         id="feOffset4547"
+         in="bluralpha"
+         dx="4"
+         dy="4"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge4549">
+        <feMergeNode
+           id="feMergeNode4551"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode4553"
+           in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="608"
+     inkscape:cy="75.88024"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3770"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="972"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     objecttolerance="10">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3759"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Whac a Gohst</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="背景"
+     style="display:inline"
+     transform="translate(0,-412.36221)">
+    <rect
+       style="fill:url(#linearGradient3867);fill-opacity:1;stroke:none"
+       id="rect3823"
+       width="1028"
+       height="480"
+       x="-2"
+       y="572.36218" />
+    <path
+       transform="matrix(1.6007751,0,0,2.051282,-240.3643,-279.61149)"
+       d="m 728,570.36218 a 258,78 0 1 1 -516,0 258,78 0 1 1 516,0 z"
+       sodipodi:ry="78"
+       sodipodi:rx="258"
+       sodipodi:cy="570.36218"
+       sodipodi:cx="470"
+       id="path3886"
+       style="fill:#c39137;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#29201a;fill-opacity:1;stroke:none;display:inline"
+       id="path3882"
+       sodipodi:cx="470"
+       sodipodi:cy="570.36218"
+       sodipodi:rx="258"
+       sodipodi:ry="78"
+       d="m 728,570.36218 a 258,78 0 1 1 -516,0 258,78 0 1 1 516,0 z"
+       transform="matrix(1.5116279,0,0,1.7948718,-198.46512,-147.3648)"
+       mask="none"
+       clip-path="none" />
+    <rect
+       style="fill:url(#linearGradient3775);fill-opacity:1;stroke:none"
+       id="rect3765"
+       width="1028"
+       height="160"
+       x="-2"
+       y="412.36221" />
+  </g>
+  <g
+     inkscape:label="キャラクタ"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(155,390) scale(1.6,1.6)">
+    <g
+       id="gohst" >
+       <g>
+  <defs>
+    <linearGradient id="lop-ear-parts-7-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="80%" stop-color="#ffe0dd"/>
+    </linearGradient>
+    <circle id="spot" cx="5" cy="5" r="5" fill="#bd2b62"/>
+    <clipPath id="ring-inner">
+      <path d="M-1.5,-10 H40 V34.5 H16.5 A14.8,14.8 0 1 0 -1.5,16.5 Z" fill="red" style="opacity:0.3" />
+    </clipPath>
+    <!-- 微調整 r=15 → r=14 -->
+    <g id="ring-fore" clip-path="url(#ring-inner)">
+      <circle cx="16.5" cy="16.5" r="14" fill="none" stroke="#fffaa3" stroke-width="5"/>
+    </g>
+    <g id="ring-back" clip-path="url(#ring-inner)">
+      <circle cx="16.5" cy="16.5" r="14" fill="none" stroke="#f3e781" stroke-width="5"/>
+    </g>
+    <filter id="small-eye-filter">
+      <feGaussianBlur id="feGaussianBlur4026" stdDeviation="0.7"/>
+    </filter>
+    <radialGradient id="eye-reflection-fill">
+      <stop offset="70%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+    </radialGradient>
+    <g id="eye">
+      <!-- 微調整 r=13 → r=13.5 -->
+      <circle id="eye-outer-eye" cx="13.5" cy="14.5" r="13.5" fill="#ed3a7d" stroke="#721c2b"/>
+      <circle id="eye-small-eye" cx="13.5" cy="14.5" r="6" fill="#9a0e43" stroke="#721c2b" filter="url(#small-eye-filter)"/>
+      <circle id="eye-reflection" cx="20.5" cy="10" r="6" fill="url(#eye-reflection-fill)" stroke="none"/>
+    </g>
+    <g id="finger">
+      <path d="M0,0 H1 A3,3 0 0 1 4,3 V4" fill="#FFF" stroke="#999" stroke-width="1.2"/>
+    </g>
+    <linearGradient id="shadow-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <!-- Safari5 は SVG で rgba を解釈しないみたい。https://lists.webkit.org/pipermail/webkit-dev/2010-June/013027.html -->
+      <!-- Chrome は rgba のアルファチャネルのグラデーションが出来ない。 -->
+      <stop offset="0%" stop-color="#000" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="face-shadow-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <!-- 微調整 opacity="0.8;1;0" → opacity="0.4;1;0" -->
+      <stop offset="0%" stop-color="#000" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#000" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#555" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+    <!--
+    <g id="ring-test" transform="translate(500, 100)">
+      <circle cx="16.5" cy="16.5" r="14" fill="none" stroke="#fffaa3" stroke-width="5"/>
+      <path d="M-1.5,-10 H40 V34.5 H16.5 A14.8,14.8 0 1 0 -1.5,16.5 Z" fill="red" style="opacity:0.3" />
+    </g>
+    -->
+  <g id="tail">
+    <g id="tail-parts-1" transform="translate(270, 47) translate(65,90)">
+      <g transform="scale(1, 1.05) skewY(-10)">
+        <!-- 微調整 heigth=180 → height=181 -->
+        <path d="M0,0 A130,90 0 0 1 0,181" fill="#FFF" stroke="#999" stroke-width="1.1" transform="translate(-65,-90)" />
+      </g>
+    </g>
+    <g id="tail-parts-2" transform="translate(262, 110) translate(42.5,40)">
+      <g transform="rotate(-13) skewX(30)">
+        <path d="M0,0 V80 H20 V0" fill="#FFF" stroke="none" transform="translate(-42.5,-40)" />
+        <path d="M0,0 V80" fill="none" stroke="#999" transform="translate(-42.5,-40)" />
+      </g>
+    </g>
+    <g id="tail-parts-3" transform="translate(252, 161) translate(24,36.5)">
+      <g transform="rotate(30)">
+        <path d="M0,0 V73 H30 V0 Z" fill="#FFF" stroke="none" transform="translate(-24,-36.5)"/>
+        <path d="M0,0 V73" fill="#FFF" stroke="#999" transform="translate(-24,-36.5)"/>
+      </g>
+    </g>
+    <g id="tail-parts-4" transform="translate(94, 78) translate(45,25)">
+      <g transform="rotate(-30) skewX(20)">
+        <path d="M0,0 H90 V50 H0 Z" fill="#FFF" stroke="none" transform="translate(-45,-25)"/>
+        <path d="M0,0 H90" stroke="#999" transform="translate(-45,-25)"/>
+      </g>
+    </g>
+    <g id="tail-parts-5" transform="translate(90, 90) translate(75,25)">
+      <g transform="rotate(5) skewX(-70)">
+        <rect width="150" height="50" fill="#FFF" stroke="none" transform="translate(-75,-25)" />
+      </g>
+    </g>
+    <!-- 微調整 translate(40, 99) → translate(40, 100) -->
+    <g id="tail-parts-6" transform="translate(40, 100) translate(12.5,12.5)">
+      <g transform="rotate(145) skewX(50)">
+        <path d="M0,0 A25,25 0 0 1 25,25 H35 V-10 H0 Z" fill="#FFF" stroke="none" transform="translate(-12.5,-12.5)"/>
+        <path d="M0,0 A25,25 0 0 1 25,25" fill="none" stroke="#999" transform="translate(-12.5,-12.5)"/>
+      </g>
+    </g>
+    <g id="tail-parts-7" transform="translate(52, 98) translate(10,10)">
+      <g transform="rotate(76) scale(1, 3.7) rotate(25) skewX(-25)">
+        <!-- 再現が難しいのでパス。
+        <path d="M0,0 A35,35 0 0 1 22.5,22.5" fill="none" stroke="#FFF" stroke-width="5" transform="translate(-10,-10)"/>
+        -->
+      </g>
+    </g>
+    <g id="tail-parts-8" transform="translate(90, 135) translate(25,10)">
+      <g transform="rotate(5) scale(3.2, 1) skewX(30)">
+        <path d="M0,0 A25,20 0 0 0 25,20 A25,20 0 0 0 50,0 V-3 H0 Z" fill="#FFF" stroke="none" transform="translate(-25,-10)"/>
+        <path d="M0,0 A25,20 0 0 0 25,20 A25,20 0 0 0 50,0" fill="#FFF" stroke="#999" stroke-width="0.8" transform="translate(-25,-10)"/>
+      </g>
+    </g>
+    <g id="tail-parts-9" transform="translate(9, 110) translate(12.5,12.5)">
+      <g transform="rotate(25) scale(1.3, 0.3) rotate(45)">
+        <path d="M0,0 V25 H25" fill="#FFF" stroke="#999" stroke-width="1.4" transform="translate(-12.5,-12.5)"/>
+      </g>
+    </g>
+  </g>
+  
+  <g id="ear-left">
+    <g id="ear-left-parts-2" transform="translate(130,22) translate(20,20)">
+      <g id="ear-parts-2" transform="rotate(-85) skewX(-45)">
+        <path d="M0,40 A40,40 0 0 1 40,0" fill="#FFF" stroke="#999" transform="translate(-20,-20)"/>
+      </g>
+    </g>
+    <g id="ear-left-parts-3" transform="translate(135,22) translate(16,16)">
+      <g id="ear-parts-3" transform="rotate(-85) skewX(-45)">
+        <path d="M0,32 A32,32 0 0 1 32,0 V32,32 Z" fill="#d59487" stroke="none" transform="translate(-16,-16)"/>
+      </g>
+    </g>
+  </g>
+  <g id="ear-right" transform="translate(448,0)">
+    <use xlink:href="#ear-left" transform="scale(-1, 1)"/>
+  </g>
+  
+  <g id="ring-left-parts-2" transform="translate(108,155) translate(16.5,16.5)">
+    <g transform="rotate(-70) scale(1.2, 2.5) rotate(45)">
+      <use xlink:href="#ring-back" transform="translate(-16.5,-16.5)"/>
+    </g>
+  </g>
+  <g id="ring-right-parts-2" transform="translate(308,155) translate(16.5,16.5)">
+    <g transform="rotate(-120) scale(1.2, 2.5) rotate(45)">
+      <use xlink:href="#ring-back" transform="translate(-16.5,-16.5)"/>
+    </g>
+  </g>
+  
+  <g id="lop-ear-left">
+    <g id="lop-ear-left-parts-1" transform="translate(134,54) translate(15,15)">
+      <g id="lop-ear-parts-2" transform="rotate(35) scale(0.8, 1.8) rotate(-45)">
+        <!-- H40 V20 を付け足しているのは耳の中の色を上書きするため -->
+        <path d="M0,30 A30,30 0 0 1 30,0 H40 V20" fill="#FFF" stroke="#999" transform="translate(-15,-15)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-parts-2" transform="translate(119,95) translate(14,42.5)">
+      <g id="lop-ear-parts-2" transform="rotate(-22) skewX(-30)">
+        <path d="M10,0 H28 V75 A15,15 0 0 1 13,85 H0 Z" fill="#FFF" transform="translate(-14,-42.5)"/>
+        <path d="M28,0 V70" fill="#FFF" stroke="#999" transform="translate(-14,-42.5)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-parts-3" transform="translate(114,126) translate(6.5,6.5)">
+      <g id="lop-ear-parts-3" transform="rotate(12) scale(0.6, 4.5) rotate(-45)">
+        <path d="M0,13 A13,13 0 0 1 13,0 L33,25 L18,32 Z" fill="#FFF" stroke="none" transform="translate(-6.5,-6.5)"/>
+        <path d="M0,13 A13,13 0 0 1 13,0" fill="#FFF" stroke="#999" transform="translate(-6.5,-6.5)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-parts-4" transform="translate(120,194) translate(7.5,7.5)">
+      <g id="lop-ear-parts-4" transform="rotate(200) scale(0.8, 4) rotate(-45)">
+        <path d="M0,15 A15,15 0 0 1 15,0 H20 V15 Z" fill="#FFF" stroke="none" transform="translate(-7.5,-7.5)"/>
+        <path d="M0,15 A15,15 0 0 1 15,0" fill="#FFF" stroke="#999" transform="translate(-7.5,-7.5)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-parts-5" transform="translate(97,183) translate(7.5,7.5)">
+      <g id="lop-ear-parts-5" transform="rotate(21) scale(0.6, 2) rotate(45)">
+        <path d="M0,0 A15,15 0 0 1 15,15 H30 V-15 H0 Z" fill="#FFF" stroke="none" transform="translate(-7.5,-7.5)"/>
+        <path d="M0,0 A15,15 0 0 1 15,15" fill="none" stroke="#999" transform="translate(-7.5,-7.5)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-parts-6" transform="translate(96,164) translate(7.5,7.5)">
+      <!-- パス
+      <g id="lop-ear-parts-6" transform="rotate(17) scale(0.6, 2.3) rotate(45)">
+        <path d="M0,0 A50,50 0 0 1 15,15" fill="#F0F" stroke="#F00" stroke-width="35" transform="translate(-7.5,-7.5)"/>
+      </g>
+      -->
+    </g>
+    <!-- 微調整 translate(99,205) → translate(98,205) -->
+    <g id="lop-ear-left-parts-7" transform="translate(98,205) translate(14,8.5)">
+      <g id="lop-ear-parts-7" transform="rotate(26)">
+        <path d="M0,10 A1,10 0 0 1 1,0 H25 A2,10 0 0 1 27,10 V17 H0 Z" fill="url(#lop-ear-parts-7-fill)" stroke="none" transform="translate(-14,-8.5)"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(84,204) → translate(85,204) -->
+    <g id="lop-ear-left-parts-8" transform="translate(85,204) translate(4,23.5)">
+      <g id="lop-ear-parts-8" transform="rotate(219)">
+        <!-- 微調整 width=8 → width=9, V47 → V45 -->
+        <path d="M0,23 A4,23 0 0 1 4,0 H5 A4,23 0 0 1 9,23 V45" fill="#ffe0dd" stroke="#999" stroke-width="0.8" transform="translate(-4,-23.5)"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(80,223) → translate(81,223) -->
+    <g id="lop-ear-left-parts-9" transform="translate(81,223) translate(6.5,22.5)">
+      <g id="lop-ear-parts-9" transform="rotate(214)">
+        <!-- 微調整 width=13 → width=14 -->
+        <path d="M0,23 A7,23 0 0 1 7,0 A7,23 0 0 1 14,23 V45 H0 Z" fill="#ffe0dd" stroke="#999" stroke-width="0.8" transform="translate(-6.5,-22.5)"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(88,234) → translate(89,234) -->
+    <g id="lop-ear-left-parts-10" transform="translate(89,234) translate(6.5,22)">
+      <g id="lop-ear-parts-10" transform="rotate(214)">
+        <path d="M0,23 A7,23 0 0 1 7,0 A7,23 0 0 1 13,23 V45 H0 Z" fill="#ffe0dd" stroke="#999" stroke-width="0.8" transform="translate(-6.5,-22)"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(91,218) → translate(90,218) -->
+    <g id="lop-ear-left-parts-11" transform="translate(90,218) translate(14,10)">
+      <g id="lop-ear-parts-11" transform="rotate(30)">
+        <path d="M0,0 H23 A5,5 0 0 1 28,5 V15 A2,5 0 0 1 26,20 H0 Z" fill="#ffe0dd" stroke="none" transform="translate(-14,-10)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-spot-1" transform="translate(112,210) translate(5,5)">
+      <g transform="rotate(22) scale(0.5, 1.4)">
+        <use xlink:href="#spot" transform="translate(-5,-5)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-spot-2" transform="translate(103,205) translate(5,5)">
+      <g transform="rotate(23) scale(0.4, 1.4)">
+        <use xlink:href="#spot" transform="translate(-5,-5)"/>
+      </g>
+    </g>
+    <g id="lop-ear-left-spot-3" transform="translate(100,199) translate(5,5)">
+      <g transform="rotate(23) scale(0.3, 1)">
+        <use xlink:href="#spot" transform="translate(-5,-5)"/>
+      </g>
+    </g>
+  </g>
+  <g id="lop-ear-right" transform="translate(451,0)">
+   <use xlink:href="#lop-ear-left" transform="scale(-1, 1)"/>
+  </g>
+
+  <g id="ring-left-parts-1" transform="translate(108,155) translate(16.5,16.5)">
+    <g transform="rotate(110) scale(1.2, 2.5) rotate(45)">
+      <use xlink:href="#ring-fore" transform="translate(-16.5,-16.5)"/>
+    </g>
+  </g>
+  <g id="ring-right-parts-2" transform="translate(308,155) translate(16.5,16.5)">
+    <g transform="rotate(60) scale(1.2, 2.5) rotate(45)">
+      <use xlink:href="#ring-fore" transform="translate(-16.5,-16.5)"/>
+    </g>
+  </g>
+  
+  <g id="foot-left">
+    <g transform="translate(187,286)">
+      <g>
+        <!-- 微調整 width=30 → width=31, height=23 → height=24 -->
+        <path d="M0,10 A15,10 0 0 1 31,10 V14 A15,10 0 0 1 0,14 Z" fill="#FFF" stroke="#999"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(187,286) → translate(189,287) -->
+    <g id="foot-left-finger-1" transform="translate(189,287) translate(3,15)">
+      <g transform="rotate(225 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+    <g id="foot-left-finger-2" transform="translate(189,287) translate(12,18)">
+      <g transform="rotate(225 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+  </g>
+  <g id="foot-right">
+    <g transform="translate(235,286)">
+      <g>
+        <!-- 微調整 width=30 → width=31, height=23 → height=24 -->
+        <path d="M0,10 A15,10 0 0 1 31,10 V14 A15,10 0 0 1 0,14 Z" fill="#FFF" stroke="#999"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(235,286) → translate(236,287) -->
+    <g id="foot-left-finger-1" transform="translate(236,287) translate(12,18)">
+      <g transform="rotate(45 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+    <g id="foot-left-finger-2" transform="translate(236,287) translate(20,17)">
+      <g transform="rotate(45 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+  </g>
+  
+  <g id="body">
+    <g id="body-left-line" transform="translate(195,110) translate(25,75)">
+      <g transform="skewX(-15)">
+        <path d="M0,0 V150 H50 V0 Z" fill="#FFF" stroke="none" transform="translate(-25,-75)"/>
+        <path d="M0,0 V150" fill="#FFF" stroke="#9b917a" transform="translate(-25,-75)"/>
+      </g>
+    </g>
+    <g id="body-left-line" transform="translate(210,110) translate(25,75)">
+      <g transform="skewX(15)">
+        <path d="M50,0 V150 H0 V0 Z" fill="#FFF" stroke="none" transform="translate(-25,-75)"/>
+        <path d="M50,0 V150" fill="#FFF" stroke="#9b917a" transform="translate(-25,-75)"/>
+      </g>
+    </g>
+  </g>
+  
+  <g id="backleg">
+    <!-- 微調整 translate(174,230) → translate(175,230) -->
+    <g transform="translate(175,230)">
+      <!-- 微調整 width=106 → width=105 -->
+      <!-- 元CSS と数字が違うけど、width/height を超える border-radius の再現が難しかったので、だいたい見た目がそろう感じで。-->
+      <path d="M0,42 A24,33 0 0 1 20,0 H85 A24,33 0 0 1 105,42 A30,40 0 0 1 76,73 H30 A30,40 0 0 1 0,42" fill="#FFF" stroke="#999"/>
+      <path d="M1,40 A25,33 0 0 1 26,-1 V-2 H79 V-1 A25,33 0 0 1 104,40 Z" fill="#FFF" stroke="#FFF"/>
+    </g>
+  </g>
+  
+  <g id="foreleg-left">
+    <!-- 微調整 translate(197,233) → translate(198,233) -->
+    <g id="foreleg-left-line-left" transform="translate(198,233) translate(5,40)">
+      <g transform="rotate(-15)">
+        <path d="M0,80 V30 A10,30 0 0 1 10,0" fill="#FFF" stroke="#999" stroke-width="1.6" transform="translate(-5,-40)"/>
+        <path d="M1,80 V30 A10,30 0 0 1 9,-1 H10 V80" fill="#FFF" stroke="none" transform="translate(-5,-40)"/>
+      </g>
+    </g>
+    <g id="foreleg-left-line-right" transform="translate(208,220) translate(5,47.5)">
+      <g id="ear-parts-2" transform="rotate(-5)">
+        <path d="M10,0 V95 H0 V0 Z" fill="#FFF" stroke="none" transform="translate(-5,-47.5)"/>
+        <path d="M10,0 V95" fill="#FFF" stroke="#999" transform="translate(-5,-47.5)"/>
+      </g>
+    </g>
+  </g>
+  <!-- 元画像がそうなので、あえて左右対象にしない。-->
+  <g id="foreleg-right">
+    <g id="foreleg-right-line-left" transform="translate(228,215) translate(5,50)">
+      <g id="ear-parts-2" transform="rotate(2)">
+        <path d="M0,0 V100 H10 V0 Z" fill="#FFF" stroke="none" transform="translate(-5,-50)"/>
+        <path d="M0,0 V100" fill="#FFF" stroke="#999" transform="translate(-5,-50)"/>
+      </g>
+    </g>
+    <g id="foreleg-right-line-right" transform="translate(241,233) translate(5,40)">
+      <g transform="rotate(15)">
+        <!-- 微調整 radius=5px/30px → radius=8px/40px -->
+        <path d="M10,80 V40 A8,40 0 0 0 2,0" fill="#FFF" stroke="#999" stroke-width="1.4" transform="translate(-5,-40)"/>
+        <path d="M9,80 V40 A8,40 0 0 0 3,-2 H0 V80" fill="#FFF" stroke="none" transform="translate(-5,-40)"/>
+      </g>
+    </g>
+  </g>
+  
+  <g id="hand-left">
+    <g transform="translate(206,310)">
+      <g>
+        <!-- 微調整 width=16 → width=17 -->
+        <path d="M0,6 A7,6 0 0 1 7,0 H10 A7,6 0 0 1 17,6 V10 A8,5 0 0 1 9,15 H8 A8,5 0 0 1 0,10 Z" fill="#FFF" stroke="#999"/>
+        <path d="M1,5 A7,6 0 0 1 8,-2 A7,6 0 0 1 16,5 Z" fill="#FFF" stroke="none"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(206,310) → translate(208,310) -->
+    <g id="hand-left-finger-1" transform="translate(208,310) translate(1,8)">
+      <g transform="rotate(225 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+    <g id="hand-left-finger-2" transform="translate(208,310) translate(7,9)">
+      <g transform="rotate(225 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+  </g>
+  <g id="hand-right">
+    <g transform="translate(226,310)">
+      <g>
+        <path d="M0,6 A7,6 0 0 1 7,0 H10 A7,6 0 0 1 17,6 V10 A8,5 0 0 1 9,15 H8 A8,5 0 0 1 0,10 Z" fill="#FFF" stroke="#999"/>
+        <path d="M1,5 A7,6 0 0 1 8,-2 A7,6 0 0 1 16,5 Z" fill="#FFF" stroke="none"/>
+      </g>
+    </g>
+    <!-- 微調整 translate(226,310) → translate(227,310) -->
+    <g id="hand-left-finger-1" transform="translate(227,310) translate(5,9)">
+      <g transform="rotate(45 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+    <g id="hand-left-finger-2" transform="translate(227,310) translate(10,9)">
+      <g transform="rotate(45 2,2)">
+         <use xlink:href="#finger"/>
+      </g>
+    </g>
+  </g>
+  
+  <g id="head" transform="translate(145, 40)">
+    <g>
+      <!-- 微調整 height=120 → height=121 -->
+      <!-- 元CSS と数字が違うけど、width/height を超える border-radius の再現が難しかったので、だいたい見た目がそろう感じで。-->
+      <path d="M0,60 A55,60 0 0 1 55,0 H105 A55,60 0 0 1 162,60 A65,60 0 0 1 97,121 H65 A65,60 0 0 1 0,60" fill="#FFF" stroke="#999" stroke-width="0.8"/>
+    </g>
+    <!-- 微調整 translate(30,-40) → translate(31,-39) -->
+    <g id="head-top" transform="translate(31, -39) translate(50,50)">
+      <g transform="rotate(-45)">
+        <path d="M0,0 A100,100 0 0 1 100,100 H0 Z" fill="#FFF" stroke="none" transform="translate(-50,-50)"/>
+        <path d="M0,0 A100,100 0 0 1 100,100" fill="#FFF" stroke="#999" stroke-width="0.8" transform="translate(-50,-50)"/>
+      </g>
+    </g>
+    <g id="gohst-eyes">
+      <g id="eye-left" transform="translate(21,35)">
+        <use xlink:href="#eye"/>
+      </g>
+      <!-- 微調整 translate(112,35) → translate(113,35) -->
+      <g id="eye-right" transform="translate(113,35)">
+        <use xlink:href="#eye"/>
+      </g>
+    </g>
+    <g id="gohst-eyes-hit" style="display:none">
+      <path d="m 25,40 40,12 -43,15" fill="none" stroke="#29201A" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" />
+      <path d="m 140,40 -40,12 43,15" fill="none" stroke="#29201A" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" />
+    </g>
+
+    <g id="mouse">
+      <!-- 微調整 translate(70,88) → translate(72,89) -->
+      <g id="mouse-left" transform="translate(72,89) translate(4,4)">
+        <g transform="rotate(45)">
+          <path d="M8,0 A8,8 0 0 1 0,8" fill="#FFF" stroke="#999" transform="translate(-4,-4)"/>
+        </g>
+      </g>
+      <g id="mouse-right" transform="translate(11,0)">
+        <use xlink:href="#mouse-left"/>
+      </g>
+    </g>
+  </g>
+  
+  <g id="ear-left-parts-1" transform="translate(148,26) translate(30,11)">
+    <g id="ear-parts-1" transform="rotate(28) skewX(67)">
+      <path d="M0,22 V0 H60" fill="#FFF" stroke="#999" transform="translate(-30,-11)"/>
+    </g>
+  </g>
+  <g id="ear-right-parts-1" transform="translate(240,26) translate(30,11)">
+    <use xlink:href="#ear-parts-1" transform="scale(-1, 1)"/>
+  </g>
+  
+  <g id="shadow" style="display:none">
+    <rect width="100%" height="100%" fill="url(#shadow-fill)" style="opacity:0.4"/>
+    <g id="face-shadow" transform="translate(120, 22)">
+      <path d="M0,100 A105,120 0 0 1 105,0 H106 A105,120 0 0 1 211,100 L213,120 H-4 Z" fill="url(#face-shadow-fill)" stroke="none" style="opacity:0.2"/>
+    </g>
+    <!-- 画面表示時にアニメーションを開始 -->
+    <animate attributeType="CSS" attributeName="opacity" dur="10s" values="0;0;1" keyTimes="0;0.6;1" repeatCount="1" begin="0"/>
+    <animate attributeType="CSS" attributeName="opacity" dur="10s" values="0;0;1" keyTimes="0;0.6;1" repeatCount="1" begin="mousemove"/>
+  </g>
+  </g>
+    </g>
+  </g>
+  <g
+     transform="translate(0,-412.36221)"
+     style="display:inline"
+     inkscape:label="背景 前面"
+     id="g3770"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:#42a611;fill-opacity:1;stroke:none"
+       d="m -2,892.36221 0,659.99999 1028,0 0,-659.99999 -102.90039,0 C 912.36067,977.00525 732.40945,1044.3622 512,1044.3622 c -220.40945,0 -400.36067,-67.35695 -411.09961,-151.99999 l -102.90039,0 z"
+       id="rect3772"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#c39137;fill-opacity:1;stroke:none"
+       d="M 99.03125,480 C 101.80359,567.44141 285.6344,638 512,638 738.3656,638 922.19641,567.44141 924.96875,480 L 894.25,480 C 865.07735,546.8691 705.04525,598 512,598 318.95475,598 158.92265,546.8691 129.75,480 l -30.71875,0 z"
+       transform="translate(0,412.36221)"
+       id="path3774"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#29201a;fill-opacity:1;stroke:none;display:inline"
+       mask="none"
+       clip-path="none"
+       d="m 124.5,480 c 22.12941,69.78048 187.19025,124 387.5,124 200.30975,0 365.37059,-54.21952 387.5,-124 l -11.1875,0 C 852.73868,543.90524 697.78085,592 512,592 326.21915,592 171.26132,543.90524 135.6875,480 L 124.5,480 z"
+       transform="translate(0,412.36221)"
+       id="path3776"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="スコア">
+    <text
+       xml:space="preserve"
+       style="font-size:140.92529297px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffc600;fill-opacity:1;stroke:none;filter:url(#filter4541);font-family:MoolBoran,serif;-inkscape-font-specification:MoolBoran Bold"
+       x="995.14233"
+       y="636.79053"
+       id="score"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0141155,0.98608097)"><tspan
+         sodipodi:role="line"
+         id="tspan3009"
+         x="995.14233"
+         y="636.79053">0</tspan></text>
+  </g>
+
+<script type="text/ecmascript"><![CDATA[
+
+    // listen global message event.
+    addEventListener('message', receiveMessage, false);
+    /**
+     * receive message from external window.
+     * If the message is sent with MessagePort, the result is sent back to the port. 
+     * 
+     * <p>
+     * If you make your own character SVG, please implement these massage API.
+     * </p>
+     * @param {MessageEvent} e message event. 
+     */
+    function receiveMessage(e) {
+        var result = null;
+        
+        //= message API =//
+        if (e.data.type == 'connect') {
+            addMessageListeners(e.ports);
+            e.ports.forEach(function (port) {
+                port.onmessage = receiveMessage;
+            });
+        }
+        else if (e.data.type == 'hit') {
+            result = hit();
+        }
+        else if (e.data.type == 'effect') {
+            result = effect(e.data.value);
+        }
+        else if (e.data.type == 'score') {
+            if (e.data.value != null) {
+                setScore(e.data.value);
+            }
+            result = getScore();
+        }
+        else if (e.data.type == 'preferences') {
+            result = getPreferences();
+        }
+        else if (e.data.type == 'character') {
+            if (e.data.value != null) {
+                setCharacter(e.data.value);
+            }
+            result = getCharacter();
+        }
+        else if (e.data.type == 'direction') {
+            if (e.data.value != null) {
+                setDirection(e.data.value);
+            }
+            result = getDirection();
+        }
+        else {
+            result = new Error('unsupported message type. [' + e.data.type + ']');
+            console.error(result);
+        }
+        
+        // connection test.
+        if (e.data.type == 'ping') {
+            result = 'pong';
+        }
+        
+        // sent back result value to specified ports.
+        if (result != null) {
+            if(e.ports && e.ports.length > 0) {
+                e.ports.forEach(function (port) {
+                    if (port) try {
+                        port.postMessage(result);
+                    }
+                    catch (e) {
+                        console.error(e);
+                    }
+                });
+            }
+            // sent back result value to source if the sopurce is the port connected by 'connect' messsage.
+            if (e.source instanceof MessagePort) {
+                e.source.postMessage(result);
+            }
+        }
+    }
+    /**
+     * external listeners added by 'connect' message.
+     * @private
+     * @type MessagePort[]
+     */
+    var external_listeners = [];
+    /**
+     * add external listeners.
+     * (call from 'connect' message.)
+     * if same instance port exists in external_listeners, ignore it.
+     * @param {MessagePort[]} ports external listeners.
+     */
+    function addMessageListeners(ports) {
+        if (ports) {
+            for (var i = 0, len = ports.length; i < len; i++) {
+                var port = ports[i];
+                if (external_listeners.indexOf(port) < 0) {
+                    external_listeners.push(port);
+                }
+            }
+        }
+    }
+    /**
+     * dispatch message event to external_listeners.
+     * @param {Object} data send data.
+     */
+    function dispatchMessage(data) {
+        for (var i = 0, port; port = external_listeners[i]; i++) {
+            try {
+                port.postMessage(data);
+            }
+            catch (e) {
+                console.error(e);
+                external_listeners.splice(i, 1);
+                --i;
+            }
+        }
+    }
+    
+    // Global values.
+    var STATUS_DOWN = 0;
+    var STATUS_UP   = 1;
+    var STATUS_HIT  = 2;
+    
+    // Properties
+    var current_character = 'Akabei';
+    var current_direction = 'random';
+    var current_status = STATUS_DOWN;
+    
+    // DOM Elements
+    var svg = document.documentElement;
+    var gohst = document.getElementById('gohst');
+    var gohst_body = document.getElementById('gohst-body');
+    var eyes = document.getElementById('gohst-eyes');
+    var eyes_hit = document.getElementById('gohst-eyes-hit');
+    var mouse = document.getElementById('mouse');
+    
+    // Public
+    /**
+     * hit a gohst.
+     * @return {Boolean} true -> hit, false -> air shot.
+     */
+    function hit() {
+        var result = false;
+        if (current_status == STATUS_UP && detectCollision()) {
+            result = true;
+            animHit();
+            setScore(getScore() + 100);
+            dispatchMessage({type: 'hit'});
+        }
+        return result;
+    }
+    /**
+     * visual effects.
+     * @param {String} value effect type.
+     */
+    function effect(value) {
+        if (value == 'hit') {
+            animHit();
+        }
+        else if (value == 'up') {
+            animUp();
+        }
+    }
+    
+    /**
+     * Returns current score.
+     * @return {Number} current score.
+     */
+    function getScore() {
+        var score_field = document.getElementById('score');
+        return Number(score_field.firstChild.textContent);
+    }
+    /**
+     * Set score.
+     * @param {Number} value score.
+     */
+    function setScore(value) {
+        var score_field = document.getElementById('score');
+        score_field.firstChild.textContent = Number(value) || 0;
+    }
+    
+    /**
+     * Create Preference Info.
+     * @class Preference
+     * @property {String} name name.
+     * @property {String} title title of this preference.
+     * @property {String} type input type.
+     * @property {String} values available values (optional).
+     * @property {String} value current value.
+     */
+    function Preference() {
+    }
+    /**
+     * Returns available preferences.
+     * @return {Preference[]} preference list.
+     */
+    function getPreferences() {
+        return [
+            { name: 'character', title: 'Character', type: 'radio', values: ['Akabei', 'Aosuke', 'Pinkey', 'Guzuda'], value: getCharacter() },
+            { name: 'direction', title: 'Direction of eyes', type: 'radio', values: ['random', 'left', 'right', 'you'], value: getDirection() },
+        ];
+    }
+    
+    /**
+     * Returns current character.
+     * @return {String} current character
+     */
+    function getCharacter() {
+        return current_character;
+    }
+    /**
+     * @constant
+     */
+    var COLOR_MAP = {
+        'Akabei': '#ff0000',
+        'Pinky' : '#ffbbff',
+        'Aosuke': '#6bffff',
+        'Guzuta': '#ffC451'
+    };
+    /**
+     * Set character.
+     * @param {String} value character.
+     */
+    function setCharacter(character) {
+        var color = COLOR_MAP[character];
+        if (color) {
+            gohst_body.style.fill = color;
+            current_character = character;
+        }
+    }
+    /**
+     * Returns current direction.
+     * @return {String} current direction.
+     */
+    function getDirection() {
+        return current_direction;
+    }
+    /**
+     * Set direction.
+     * @param {String} value direction.
+     */
+    function setDirection(value) {
+        if (/left|right|random|you/i.test(value)) {
+            current_direction = value.toLowerCase();
+            updateDirection();
+        }
+    }
+    
+    // Private
+    /**
+     * random direction timer id.
+     * @private
+     */
+    var randomTid = null;
+    /**
+     * update eyes direction.
+     * @private
+     */
+    function updateDirection() {
+      // do nothing.
+    }
+    
+    /**
+     * animation elements.
+     * @private
+     * @constant
+     */
+    var ANIMATIONS = [
+        createAnimation({values:'0 0;0 -230;0 -230;0 0;', dur:'5s', keyTimes:'0;0.15;0.85;1', keySplines:'0.5 0 0.5 1;0 0 0 0;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -40;0 0;', dur:'0.5s', keySplines:'0.5 0 0.5 1;0 0 0 0;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -230;0 0;', dur:'1.5s', keySplines:'0.5 0 0.5 1;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -230;0 -230;0 0;', dur:'3s', keyTimes:'0;0.1;0.9;1', keySplines:'0.5 0 0.5 1;0 0 0 0;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -230;0 0;', keyTimes:'0;0.2;1', dur:'1.8s'}),
+    ];
+    /**
+     * create svg:animateTransform element.
+     * @private
+     * @param option animation attributes.
+     */
+    function createAnimation(option) {
+        var anim = document.createElementNS(svg.namespaceURI, 'animateTransform');
+        anim.id = 'anim-up';
+        anim.setAttributeNS(svg.namespaceURI, 'attributeName', 'transform');
+        anim.setAttributeNS(svg.namespaceURI, 'type', 'translate');
+        anim.setAttributeNS(svg.namespaceURI, 'repeatCount', '1');
+        anim.setAttributeNS(svg.namespaceURI, 'fill', 'remove');
+        anim.setAttributeNS(svg.namespaceURI, 'values', option.values);
+        anim.setAttributeNS(svg.namespaceURI, 'dur', option.dur || '5s');
+        anim.setAttributeNS(svg.namespaceURI, 'calcMode', option.calcMode || 'linear');
+        if (option.keyTimes) {
+            anim.setAttributeNS(svg.namespaceURI, 'keyTimes', option.keyTimes);
+        }
+        if (option.keySplines) {
+            anim.setAttributeNS(svg.namespaceURI, 'keySplines', option.keySplines);
+        }
+        anim.addEventListener('endEvent', on_endAnimation, false);
+        return anim;
+    }
+    /**
+     * animation end event handler.
+     * @private
+     * @param {TimerEvent} e event object.
+     */
+    function on_endAnimation(e) {
+        current_status = STATUS_DOWN;
+        updateEyes();
+        removeAnimAll();
+        prepareNext();
+    }
+    /**
+     * next animation timer id.
+     * @private
+     */
+    var nextTid;
+    /**
+     * prepare next animation timer.
+     * @private
+     * @param {Number} minimum wait time(ms).
+     */
+    function prepareNext(after) {
+        clearNext();
+        var nextRand = (after || 0) + 7000 * Math.random();
+        nextTid = setTimeout(animUp, nextRand);
+    }
+    /**
+     * clear next animation timer.
+     * @private
+     */
+    function clearNext() {
+        if (nextTid) {
+            clearTimeout(nextTid);
+            nextTid = null;
+        }
+    }
+    /**
+     * remove animation element.
+     * @private
+     * @param {String} id element's id.
+     */
+    function removeAnim(id) {
+        var anim = gohst.querySelector('#' + id);
+        if (anim) {
+            gohst.removeChild(anim);
+        }
+    }
+    /**
+     * remove all animation element.
+     * @private
+     */
+    function removeAnimAll() {
+        removeAnim('anim-up');
+        removeAnim('anim-hit');
+    }
+    /**
+     * animate gohst up.
+     * @private
+     */
+    function animUp() {
+        if (current_status != STATUS_DOWN) return;
+        clearNext();
+        removeAnimAll();
+        var index = Math.floor(ANIMATIONS.length * Math.random());
+        var anim = ANIMATIONS[index];
+        gohst.appendChild(anim);
+        anim.beginElement();
+        current_status = STATUS_UP;
+    }
+    /**
+     * animate gohst hit.
+     * @private
+     */
+    function animHit() {
+        var anim = createAnimation({values:'0 -150;0 0', dur:'0.8s'}); // :p
+        anim.id = 'anim-hit';
+        gohst.appendChild(anim);
+        anim.beginElement();
+        current_status = STATUS_HIT;
+        removeAnim('anim-up');
+        updateEyes();
+    }
+    /**
+     * updates eye's figure by the state. 
+     * @private
+     */
+    function updateEyes() {
+        if (current_status == STATUS_HIT) {
+            eyes.style.display = 'none';
+            eyes_hit.style.display = 'block';
+            mouse.style.display = 'none';
+        }
+        else {
+            eyes.style.display = 'block';
+            eyes_hit.style.display = 'none';
+            mouse.style.display = 'block';
+        }
+    }
+    /**
+     * detect collision 
+     * @private
+     * @return {Boolean} true -> hit, false -> air shot.
+     */
+    function detectCollision() {
+        var rect = gohst.getBBox();
+        var p = svg.createSVGPoint();
+        p.x = rect.x;
+        p.y = rect.y;
+        var m = gohst.getTransformToElement(svg);
+        p = p.matrixTransform(m);
+        return p.y < 300;
+    }
+    
+    /**
+     * gohst click event handler.
+     * @private
+     * @param {Event} e mouse event.
+     */
+    function on_gohst_click(e) {
+        hit();
+    }
+    
+    /**
+     * mousemove event handler.
+     * Simple xeyes.
+     * @private
+     * @param {Event} e mouse event.
+     */
+    function on_svg_mousemove(e) {
+    }
+    
+    /**
+     * parse http GET query string to key-value parameter map.
+     * @param {String} query query string. (url or location.search)
+     * @return {Object} key-value parameter map.
+     */
+    function parseQuery(query) {
+        var result = {};
+        var q = query.slice(query.indexOf('?') + 1);
+        var params = q.split('&');
+        for (var i = 0; i < params.length; i++) {
+            var param = params[i];
+            var pair  = param.split('=');
+            var name  = decodeURIComponent(pair.shift().replace(/\+/g, ' '));
+            var value = decodeURIComponent(pair.join('').replace(/\+/g, ' '));
+            if (!result[name]) {
+                result[name] = value;
+            }
+            else {
+                if (result[name] instanceof Array) result[name].push(value);
+                else                               result[name] = [result[name], value];
+            }
+        }
+        return result;
+    }
+    
+    // init.
+    gohst.addEventListener('click', on_gohst_click, false);
+    prepareNext(3000);
+    
+    var params = parseQuery(location.search);
+    if (params.score) {
+        setScore(params.score);
+    }
+
+]]></script>
+</svg>

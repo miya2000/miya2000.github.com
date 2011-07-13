@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="640"
+   viewBox="0 0 1024 640"
+   preserveAspectRatio="xMidYMin meet"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="akabe.svg"
+   style="enable-background:new">
+  <title
+     id="title3019">Whac a Gohst</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3769">
+      <stop
+         style="stop-color:#89a0ff;stop-opacity:1"
+         offset="0"
+         id="stop3771" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop3773" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3861">
+      <stop
+         style="stop-color:#42a611;stop-opacity:1;"
+         offset="0"
+         id="stop3863" />
+      <stop
+         style="stop-color:#53cf11;stop-opacity:1"
+         offset="1"
+         id="stop3865" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3861"
+       id="linearGradient3867"
+       x1="2"
+       y1="721.36218"
+       x2="2"
+       y2="366.36218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1870669,0,0,0.41450777,-4.374134,573.04113)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3769"
+       id="linearGradient3775"
+       x1="2"
+       y1="-1.6378175"
+       x2="2"
+       y2="291.36218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.187067,0,0,0.71748879,-4.374134,413.53733)" />
+    <filter
+       id="filter4541"
+       inkscape:label="Drop shadow"
+       width="1.5"
+       height="1.5"
+       x="-.25"
+       y="-.25">
+      <feGaussianBlur
+         id="feGaussianBlur4543"
+         in="SourceAlpha"
+         stdDeviation="2"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix4545"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0 " />
+      <feOffset
+         id="feOffset4547"
+         in="bluralpha"
+         dx="4"
+         dy="4"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge4549">
+        <feMergeNode
+           id="feMergeNode4551"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode4553"
+           in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="608"
+     inkscape:cy="75.88024"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3770"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="972"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     objecttolerance="10">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3759"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Whac a Gohst</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="背景"
+     style="display:inline"
+     transform="translate(0,-412.36221)">
+    <rect
+       style="fill:url(#linearGradient3867);fill-opacity:1;stroke:none"
+       id="rect3823"
+       width="1028"
+       height="480"
+       x="-2"
+       y="572.36218" />
+    <path
+       transform="matrix(1.6007751,0,0,2.051282,-240.3643,-279.61149)"
+       d="m 728,570.36218 a 258,78 0 1 1 -516,0 258,78 0 1 1 516,0 z"
+       sodipodi:ry="78"
+       sodipodi:rx="258"
+       sodipodi:cy="570.36218"
+       sodipodi:cx="470"
+       id="path3886"
+       style="fill:#c39137;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#29201a;fill-opacity:1;stroke:none;display:inline"
+       id="path3882"
+       sodipodi:cx="470"
+       sodipodi:cy="570.36218"
+       sodipodi:rx="258"
+       sodipodi:ry="78"
+       d="m 728,570.36218 a 258,78 0 1 1 -516,0 258,78 0 1 1 516,0 z"
+       transform="matrix(1.5116279,0,0,1.7948718,-198.46512,-147.3648)"
+       mask="none"
+       clip-path="none" />
+    <rect
+       style="fill:url(#linearGradient3775);fill-opacity:1;stroke:none"
+       id="rect3765"
+       width="1028"
+       height="160"
+       x="-2"
+       y="412.36221" />
+  </g>
+  <g
+     inkscape:label="キャラクタ"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(0,-412.36221)">
+    <g
+       id="gohst">
+      <image xlink:href="matz.png" x="60" y="350" width="518" height="240" transform="scale(2,2)" />
+    </g>
+  </g>
+  <g
+     transform="translate(0,-412.36221)"
+     style="display:inline"
+     inkscape:label="背景 前面"
+     id="g3770"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:#42a611;fill-opacity:1;stroke:none"
+       d="m -2,892.36221 0,659.99999 1028,0 0,-659.99999 -102.90039,0 C 912.36067,977.00525 732.40945,1044.3622 512,1044.3622 c -220.40945,0 -400.36067,-67.35695 -411.09961,-151.99999 l -102.90039,0 z"
+       id="rect3772"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#c39137;fill-opacity:1;stroke:none"
+       d="M 99.03125,480 C 101.80359,567.44141 285.6344,638 512,638 738.3656,638 922.19641,567.44141 924.96875,480 L 894.25,480 C 865.07735,546.8691 705.04525,598 512,598 318.95475,598 158.92265,546.8691 129.75,480 l -30.71875,0 z"
+       transform="translate(0,412.36221)"
+       id="path3774"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#29201a;fill-opacity:1;stroke:none;display:inline"
+       mask="none"
+       clip-path="none"
+       d="m 124.5,480 c 22.12941,69.78048 187.19025,124 387.5,124 200.30975,0 365.37059,-54.21952 387.5,-124 l -11.1875,0 C 852.73868,543.90524 697.78085,592 512,592 326.21915,592 171.26132,543.90524 135.6875,480 L 124.5,480 z"
+       transform="translate(0,412.36221)"
+       id="path3776"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="スコア">
+    <text
+       xml:space="preserve"
+       style="font-size:140.92529297px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffc600;fill-opacity:1;stroke:none;filter:url(#filter4541);font-family:MoolBoran,serif;-inkscape-font-specification:MoolBoran Bold"
+       x="995.14233"
+       y="636.79053"
+       id="score"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0141155,0.98608097)"><tspan
+         sodipodi:role="line"
+         id="tspan3009"
+         x="995.14233"
+         y="636.79053">0</tspan></text>
+  </g>
+
+<script type="text/ecmascript"><![CDATA[
+
+    // listen global message event.
+    addEventListener('message', receiveMessage, false);
+    /**
+     * receive message from external window.
+     * If the message is sent with MessagePort, the result is sent back to the port. 
+     * 
+     * <p>
+     * If you make your own character SVG, please implement these massage API.
+     * </p>
+     * @param {MessageEvent} e message event. 
+     */
+    function receiveMessage(e) {
+        var result = null;
+        
+        //= message API =//
+        if (e.data.type == 'connect') {
+            addMessageListeners(e.ports);
+            e.ports.forEach(function (port) {
+                port.onmessage = receiveMessage;
+            });
+        }
+        else if (e.data.type == 'hit') {
+            result = hit();
+        }
+        else if (e.data.type == 'effect') {
+            result = effect(e.data.value);
+        }
+        else if (e.data.type == 'score') {
+            if (e.data.value != null) {
+                setScore(e.data.value);
+            }
+            result = getScore();
+        }
+        else if (e.data.type == 'preferences') {
+            result = getPreferences();
+        }
+        else if (e.data.type == 'character') {
+            if (e.data.value != null) {
+                setCharacter(e.data.value);
+            }
+            result = getCharacter();
+        }
+        else if (e.data.type == 'direction') {
+            if (e.data.value != null) {
+                setDirection(e.data.value);
+            }
+            result = getDirection();
+        }
+        else {
+            result = new Error('unsupported message type. [' + e.data.type + ']');
+            console.error(result);
+        }
+        
+        // connection test.
+        if (e.data.type == 'ping') {
+            result = 'pong';
+        }
+        
+        // sent back result value to specified ports.
+        if (result != null) {
+            if(e.ports && e.ports.length > 0) {
+                e.ports.forEach(function (port) {
+                    if (port) try {
+                        port.postMessage(result);
+                    }
+                    catch (e) {
+                        console.error(e);
+                    }
+                });
+            }
+            // sent back result value to source if the sopurce is the port connected by 'connect' messsage.
+            if (e.source instanceof MessagePort) {
+                e.source.postMessage(result);
+            }
+        }
+    }
+    /**
+     * external listeners added by 'connect' message.
+     * @private
+     * @type MessagePort[]
+     */
+    var external_listeners = [];
+    /**
+     * add external listeners.
+     * (call from 'connect' message.)
+     * if same instance port exists in external_listeners, ignore it.
+     * @param {MessagePort[]} ports external listeners.
+     */
+    function addMessageListeners(ports) {
+        if (ports) {
+            for (var i = 0, len = ports.length; i < len; i++) {
+                var port = ports[i];
+                if (external_listeners.indexOf(port) < 0) {
+                    external_listeners.push(port);
+                }
+            }
+        }
+    }
+    /**
+     * dispatch message event to external_listeners.
+     * @param {Object} data send data.
+     */
+    function dispatchMessage(data) {
+        for (var i = 0, port; port = external_listeners[i]; i++) {
+            try {
+                port.postMessage(data);
+            }
+            catch (e) {
+                console.error(e);
+                external_listeners.splice(i, 1);
+                --i;
+            }
+        }
+    }
+    
+    // Global values.
+    var STATUS_DOWN = 0;
+    var STATUS_UP   = 1;
+    var STATUS_HIT  = 2;
+    
+    // Properties
+    var current_character = 'Akabei';
+    var current_direction = 'random';
+    var current_status = STATUS_DOWN;
+    
+    // DOM Elements
+    var svg = document.documentElement;
+    var gohst = document.getElementById('gohst');
+    
+    // Public
+    /**
+     * hit a gohst.
+     * @return {Boolean} true -> hit, false -> air shot.
+     */
+    function hit() {
+        var result = false;
+        if (current_status == STATUS_UP && detectCollision()) {
+            result = true;
+            animHit();
+            setScore(getScore() + 100);
+            dispatchMessage({type: 'hit'});
+        }
+        return result;
+    }
+    /**
+     * visual effects.
+     * @param {String} value effect type.
+     */
+    function effect(value) {
+        if (value == 'hit') {
+            animHit();
+        }
+        else if (value == 'up') {
+            animUp();
+        }
+    }
+    
+    /**
+     * Returns current score.
+     * @return {Number} current score.
+     */
+    function getScore() {
+        var score_field = document.getElementById('score');
+        return Number(score_field.firstChild.textContent);
+    }
+    /**
+     * Set score.
+     * @param {Number} value score.
+     */
+    function setScore(value) {
+        var score_field = document.getElementById('score');
+        score_field.firstChild.textContent = Number(value) || 0;
+    }
+    
+    /**
+     * Create Preference Info.
+     * @class Preference
+     * @property {String} name name.
+     * @property {String} title title of this preference.
+     * @property {String} type input type.
+     * @property {String} values available values (optional).
+     * @property {String} value current value.
+     */
+    function Preference() {
+    }
+    /**
+     * Returns available preferences.
+     * @return {Preference[]} preference list.
+     */
+    function getPreferences() {
+        return [
+            { name: 'character', title: 'Character', type: 'radio', values: ['Akabei', 'Aosuke', 'Pinkey', 'Guzuda'], value: getCharacter() },
+            { name: 'direction', title: 'Direction of eyes', type: 'radio', values: ['random', 'left', 'right', 'you'], value: getDirection() },
+        ];
+    }
+    
+    /**
+     * Returns current character.
+     * @return {String} current character
+     */
+    function getCharacter() {
+        return current_character;
+    }
+    /**
+     * @constant
+     */
+    var COLOR_MAP = {
+        'Akabei': '#ff0000',
+        'Pinky' : '#ffbbff',
+        'Aosuke': '#6bffff',
+        'Guzuta': '#ffC451'
+    };
+    /**
+     * Set character.
+     * @param {String} value character.
+     */
+    function setCharacter(character) {
+    }
+    /**
+     * Returns current direction.
+     * @return {String} current direction.
+     */
+    function getDirection() {
+        return current_direction;
+    }
+    /**
+     * Set direction.
+     * @param {String} value direction.
+     */
+    function setDirection(value) {
+        if (/left|right|random|you/i.test(value)) {
+            current_direction = value.toLowerCase();
+            updateDirection();
+        }
+    }
+    
+    // Private
+    /**
+     * random direction timer id.
+     * @private
+     */
+    var randomTid = null;
+    /**
+     * update eyes direction.
+     * @private
+     */
+    function updateDirection() {
+    }
+    
+    /**
+     * animation elements.
+     * @private
+     * @constant
+     */
+    var ANIMATIONS = [
+        createAnimation({values:'0 0;0 -300;0 -300;0 0;', dur:'5s', keyTimes:'0;0.15;0.85;1', keySplines:'0.5 0 0.5 1;0 0 0 0;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -40;0 0;', dur:'0.5s', keySplines:'0.5 0 0.5 1;0 0 0 0;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -300;0 0;', dur:'1.5s', keySplines:'0.5 0 0.5 1;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -300;0 -300;0 0;', dur:'3s', keyTimes:'0;0.1;0.9;1', keySplines:'0.5 0 0.5 1;0 0 0 0;0.5 0 0.5 1;', calcMode:'spline'}),
+        createAnimation({values:'0 0;0 -300;0 0;', keyTimes:'0;0.2;1', dur:'1.8s'}),
+    ];
+    /**
+     * create svg:animateTransform element.
+     * @private
+     * @param option animation attributes.
+     */
+    function createAnimation(option) {
+        var anim = document.createElementNS(svg.namespaceURI, 'animateTransform');
+        anim.id = 'anim-up';
+        anim.setAttributeNS(svg.namespaceURI, 'attributeName', 'transform');
+        anim.setAttributeNS(svg.namespaceURI, 'type', 'translate');
+        anim.setAttributeNS(svg.namespaceURI, 'repeatCount', '1');
+        anim.setAttributeNS(svg.namespaceURI, 'fill', 'remove');
+        anim.setAttributeNS(svg.namespaceURI, 'values', option.values);
+        anim.setAttributeNS(svg.namespaceURI, 'dur', option.dur || '5s');
+        anim.setAttributeNS(svg.namespaceURI, 'calcMode', option.calcMode || 'linear');
+        if (option.keyTimes) {
+            anim.setAttributeNS(svg.namespaceURI, 'keyTimes', option.keyTimes);
+        }
+        if (option.keySplines) {
+            anim.setAttributeNS(svg.namespaceURI, 'keySplines', option.keySplines);
+        }
+        anim.addEventListener('endEvent', on_endAnimation, false);
+        return anim;
+    }
+    /**
+     * animation end event handler.
+     * @private
+     * @param {TimerEvent} e event object.
+     */
+    function on_endAnimation(e) {
+        current_status = STATUS_DOWN;
+        updateEyes();
+        removeAnimAll();
+        prepareNext();
+    }
+    /**
+     * next animation timer id.
+     * @private
+     */
+    var nextTid;
+    /**
+     * prepare next animation timer.
+     * @private
+     * @param {Number} minimum wait time(ms).
+     */
+    function prepareNext(after) {
+        clearNext();
+        var nextRand = (after || 0) + 7000 * Math.random();
+        nextTid = setTimeout(animUp, nextRand);
+    }
+    /**
+     * clear next animation timer.
+     * @private
+     */
+    function clearNext() {
+        if (nextTid) {
+            clearTimeout(nextTid);
+            nextTid = null;
+        }
+    }
+    /**
+     * remove animation element.
+     * @private
+     * @param {String} id element's id.
+     */
+    function removeAnim(id) {
+        var anim = gohst.querySelector('#' + id);
+        if (anim) {
+            gohst.removeChild(anim);
+        }
+    }
+    /**
+     * remove all animation element.
+     * @private
+     */
+    function removeAnimAll() {
+        removeAnim('anim-up');
+        removeAnim('anim-hit');
+    }
+    /**
+     * animate gohst up.
+     * @private
+     */
+    function animUp() {
+        if (current_status != STATUS_DOWN) return;
+        clearNext();
+        removeAnimAll();
+        var index = Math.floor(ANIMATIONS.length * Math.random());
+        var anim = ANIMATIONS[index];
+        gohst.appendChild(anim);
+        anim.beginElement();
+        current_status = STATUS_UP;
+    }
+    /**
+     * animate gohst hit.
+     * @private
+     */
+    function animHit() {
+        var anim = createAnimation({values:'0 -150;0 0', dur:'0.8s'}); // :p
+        anim.id = 'anim-hit';
+        gohst.appendChild(anim);
+        anim.beginElement();
+        current_status = STATUS_HIT;
+        removeAnim('anim-up');
+        updateEyes();
+    }
+    /**
+     * updates eye's figure by the state. 
+     * @private
+     */
+    function updateEyes() {
+    }
+    /**
+     * detect collision 
+     * @private
+     * @return {Boolean} true -> hit, false -> air shot.
+     */
+    function detectCollision() {
+        var rect = gohst.getBBox();
+        var p = svg.createSVGPoint();
+        p.x = rect.x;
+        p.y = rect.y;
+        var m = gohst.getTransformToElement(svg);
+        p = p.matrixTransform(m);
+        return p.y < 300;
+    }
+    
+    /**
+     * gohst click event handler.
+     * @private
+     * @param {Event} e mouse event.
+     */
+    function on_gohst_click(e) {
+        hit();
+    }
+    
+    /**
+     * mousemove event handler.
+     * Simple xeyes.
+     * @private
+     * @param {Event} e mouse event.
+     */
+    function on_svg_mousemove(e) {
+    }
+    
+    /**
+     * parse http GET query string to key-value parameter map.
+     * @param {String} query query string. (url or location.search)
+     * @return {Object} key-value parameter map.
+     */
+    function parseQuery(query) {
+        var result = {};
+        var q = query.slice(query.indexOf('?') + 1);
+        var params = q.split('&');
+        for (var i = 0; i < params.length; i++) {
+            var param = params[i];
+            var pair  = param.split('=');
+            var name  = decodeURIComponent(pair.shift().replace(/\+/g, ' '));
+            var value = decodeURIComponent(pair.join('').replace(/\+/g, ' '));
+            if (!result[name]) {
+                result[name] = value;
+            }
+            else {
+                if (result[name] instanceof Array) result[name].push(value);
+                else                               result[name] = [result[name], value];
+            }
+        }
+        return result;
+    }
+    
+    // init.
+    svg.addEventListener('mousemove', on_svg_mousemove, false);
+    gohst.addEventListener('click', on_gohst_click, false);
+    prepareNext(3000);
+    
+    var params = parseQuery(location.search);
+    setCharacter(params.character || current_character);
+    setDirection(params.direction || current_direction);
+    if (params.score) {
+        setScore(params.score);
+    }
+
+]]></script>
+</svg>
