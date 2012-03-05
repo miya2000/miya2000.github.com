@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.png">
+
+<style type="text/css">
+body {
+    background-color: white;
+    font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    color: #555;
+}
+
+a:link, a:visited { color: #07F; }
+a:hover  { color: #3AF; }
+a:active { color: #F60; }
+
+body > * {
+    margin-left: 6px;
+    margin-right: 10px;
+    line-height: 1.5;
+}
+body > * > * {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* compat for Opera10.10 */
+header, section, article, footer {
+    display: block;
+}
+form {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+input[type="text"] {
+    padding: 6px 5px 5px;
+}
+input[type="submit"] {
+    padding: 6px 12px 5px;
+    font-weight: bold;
+}
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h1 {
+    border-bottom: #ccc solid 1px;
+}
+h1 > img:first-child {
+    margin-right: 0.3em;
+}
+h1 > span {
+    font-size: 21px;
+    vertical-align: middle;
+}
+#Q {
+    max-width: 98%;
+}
+footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: #ccc solid 1px;
+    font-size: small;
+}
+footer > p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+</style>
+
+<script type="text/javascript">
+
+var appid = 'qMG2kROxg66XrjV1.B4_.68J.Nb_DXp5dRmP7yq_CHs8m47lHhjW0Ux65vnP_rcto_df.w--';
+var address_base = 'http://geo.search.olp.yahooapis.jp/OpenLocalPlatform/V1/geoCoder';
+var content_base = 'http://contents.search.olp.yahooapis.jp/OpenLocalPlatform/V1/contentsGeoCoder';
+var local_base = 'http://search.olp.yahooapis.jp/OpenLocalPlatform/V1/localSearch';
+
+var global = this;
+var current_request_id = 0;
+var zoom = 19;
+
+function search() {
+    
+    var pre_callback_name = 'callback' + current_request_id;
+    var pre_script = document.getElementById(pre_callback_name);
+    if (pre_script) {
+        pre_script.parentNode.removeChild(pre_script);
+        delete global[pre_callback_name];
+    }
+    
+    current_request_id++;
+    var callback_name = 'callback' + current_request_id;
+    
+    var form = document.getElementById('SEARCH_FORM');
+    var q = form.q.value;
+    var search_url = address_base + '?appid=' + appid + '&ei=UTF-8&output=json&query=' + encodeURIComponent(q) + '&callback=' + callback_name;
+    
+    var jsonp_script = document.createElement('script');
+    jsonp_script.type = 'text/javascript';
+    jsonp_script.id = callback_name;
+    jsonp_script.src = search_url;
+    
+    setLoading(true);
+    
+    global[callback_name] = function(result) {
+        //debug.
+        //jsonp_script.parentNode.removeChild(jsonp_script);
+        delete global[callback_name];
+        
+        setLoading(false);
+        var result_area = document.getElementById('SEARCH_RESULT');
+        if (result.ResultInfo && result.ResultInfo.Status == 200 && result.ResultInfo.Count > 0) {
+            var ul = document.createElement('ul');
+            result_area.innerHTML = '';
+            result_area.appendChild(ul);
+            for (var i = 0, place; place = result.Feature[i]; i++) {
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.href = 'geo:' + place.Geometry.Coordinates.split(',').reverse().join(',') + '?z=' + zoom;
+                a.appendChild(document.createTextNode(place.Name))
+                li.appendChild(a);
+                ul.appendChild(li);
+            }
+        }
+        else {
+            var text = document.createTextNode('no result for: ' + q);
+            result_area.insertBefore(text, result_area.firstChild);
+        }
+    };
+    
+    document.getElementsByTagName('head')[0].appendChild(jsonp_script);
+}
+
+var loadingImg = new Image();
+loadingImg.src = 'loading.gif';
+
+function setLoading(show) {
+    var result_area = document.getElementById('SEARCH_RESULT');
+    if (show) {
+        result_area.innerHTML = '';
+        result_area.appendChild(loadingImg);
+    }
+    else {
+        result_area.innerHTML = '&nbsp;';
+    }
+}
+
+function parseQuery(query) {
+    var result = {};
+    var q = query.slice(query.indexOf('?') + 1);
+    var params = q.split('&');
+    for (var i = 0; i < params.length; i++) {
+        var param = params[i];
+        var pair  = param.split('=');
+        var name  = decodeURIComponent(pair.shift().replace(/\+/g, ' '));
+        var value = decodeURIComponent(pair.join('').replace(/\+/g, ' '));
+        if (!result[name]) {
+            result[name] = value;
+        }
+        else {
+            if (result[name] instanceof Array) result[name].push(value);
+            else                               result[name] = [result[name], value];
+        }
+    }
+    return result;
+}
+
+var query = parseQuery(location.search);
+
+if (query.q) {
+    window.onload = function () {
+        document.getElementById('Q').value = query.q;
+        search();
+    }
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1><img src="catch051_small.png" width="32" height="32" alt=""><span>Map Search</span></h1>
+</header>
+
+<section>
+<form id="SEARCH_FORM" action="" onsubmit="/*search(); return false;*/">
+    <div>
+    <input type="text" name="q" id="Q" size="80"> <input type="submit" value="search">
+    </div>
+</form>
+</section>
+
+<section>
+<div id="SEARCH_RESULT">
+&nbsp;
+</div>
+</section>
+
+<footer>
+
+<p>
+icon image: <a href="http://www.styraise.com/">styraise.com</a> (<a href="http://www.styraise.com/material/parts/illust/catch051.html">catch051.html</a>).
+</p>
+
+<p>
+loading image: <a href="http://www.chimply.com/">Chimply generates your images</a>
+</p>
+
+<p>
+contact: <a href="http://twitter.com/miya2000/">@miya2000</a>
+</p>
+
+<p style="margin:15px 15px 15px 0px">
+<!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
+<span><a href="http://developer.yahoo.co.jp/about">Webサービス by Yahoo! JAPAN</a></span>
+<!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
+</p>
+
+</footer>
+
+</body>
+
+</html>
