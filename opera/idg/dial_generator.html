@@ -1,0 +1,328 @@
+<!DOCTYPE HTML> 
+<!-- saved from url=(0023)http://www.hogehogefoobar.com/ -->
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Opera Image Dial Generator</title>
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+<style type="text/css">
+body {
+    margin-bottom: 5em;
+}
+.result textarea {
+    width : 80%;
+    height: 9em;
+}
+.preview_box {
+    width: 311px;
+    height: 236px;
+    text-align: center;
+    background: white url("speed_dial_box.png") center no-repeat;
+    position: relative;
+    float: left;
+    margin: 2px 10px;
+}
+.preview_box .preview_view {
+    position: absolute;
+    padding: 1px;
+    top: 21px;
+    left: 29px;
+    width: 251px;
+    height: 188px;
+    opacity: 0.8;
+    border: transparent double 1px;
+}
+.preview_box .preview_view:hover {
+    opacity: 1;
+    border-color: #A0A0A0;
+}
+.preview_box .preview_view a {
+    display: block;
+    width: 251px;
+    height: 188px;
+    overflow: hidden;
+    position: relative;
+}
+.preview_box .preview_view a img {
+    border: none;
+}
+.preview_box .preview_title {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    color: black;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+/* preview_box2 */
+.preview_box2 {
+    width: 368px;
+    height: 260px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9C9FA6;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.9);
+    background: #FDFDFD;
+}
+.preview_box2:hover {
+    background-color: #3A72A9;
+    background: -o-linear-gradient(#76A1CB, #356EA5);
+    background: linear-gradient(#76A1CB, #356EA5);
+    border-top-color: #4D82B5;
+    border-bottom-color: #376087;
+}
+.preview_box2:hover .preview_title {
+    color: #FFFFFF;
+}
+
+.preview_box2 .preview_view {
+    top: 0px;
+    left: 0px;
+    width: 368px;
+    height: 259px;
+    opacity: 1;
+    border-style: none;
+    padding: 4px;
+}
+.preview_box2 .preview_view a {
+    width: 358px;
+    height: 223px;
+    border-radius: 5px 5px 0 0;
+}
+.preview_box2 .preview_title {
+    color: #333333;
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    font-size: 13px;
+    bottom: 6px;
+}
+
+</style>
+<script type="text/javascript">
+<!-- 
+
+var stripTag = (function() {
+    var dv = document.createElement('div');
+    return function (str) {
+        dv.innerHTML = str;
+        return dv.textContent;
+    };
+})();
+
+function escAttr(str) {
+    return str.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
+}
+
+function parseQuery(query) {
+    var result = {};
+    var params = query.split('&');
+    for (var i = 0; i < params.length; i++) {
+        var param = params[i];
+        var pair  = param.split('=');
+        var name  = decodeURIComponent(pair.shift().replace(/\+/g, ' '));
+        var value = decodeURIComponent(pair.join('').replace(/\+/g, ' '));
+        result[name] = value;
+    }
+    return result;
+}
+
+function forEach(arr, callback, thisArg) {
+    for (var i = 0; i < arr.length; i++) {
+        callback.call(thisArg, arr[i], i, arr);
+    }
+}
+
+var generateForm  = null;
+var previewAnchor = null;
+var previewImage  = null;
+var previewTitle  = null;
+var resultURI     = null;
+var resultLink    = null;
+function keepElement() {
+    generateForm  = document.getElementById('GENERATE_FORM');
+    previewAnchor = [document.getElementById('PREVIEW_ANCHOR'), document.getElementById('PREVIEW_ANCHOR2')];
+    previewImage  = [document.getElementById('PREVIEW_IMAGE'), document.getElementById('PREVIEW_IMAGE2')];
+    previewTitle  = [document.getElementById('PREVIEW_TITLE'), document.getElementById('PREVIEW_TITLE2')];
+    resultURI     = document.getElementById('RESULT_URI');
+    resultLink    = document.getElementById('RESULT_LINK');
+    previewImage.onerror = function() { if (previewImage.src != 'about:blank') { previewImage.setAttribute('src', 'about:blank'); } }
+}
+
+function setParamsToForm(params) {
+    if (params.title) {
+        generateForm.title.value = params.title;
+    }
+    if (params.page) {
+        generateForm.page.value = params.page;
+    }
+    if (params.image) {
+        generateForm.image.value = params.image;
+    }
+    if (params.color) {
+        generateForm.color[0].value = generateForm.color[1].value = params.color;
+    }
+}
+
+function main(){
+    keepElement();
+    if (location.search) {
+        var params = parseQuery(location.search.slice(1));  // remove leading '?'.
+        setParamsToForm(params);
+    }
+    updatePreview();
+}
+window.onload = main;
+
+function updatePreview(input) {
+    if (input == null || input.name == 'title') {
+        forEach(previewTitle, function(previewTitle) { previewTitle.textContent = generateForm.title.value; });
+        forEach(previewImage, function(previewImage) { previewImage.setAttribute('alt', generateForm.title.value); });
+    }
+    if (input == null || input.name == 'page') {
+        var href = generateForm.page.value.replace(/^\s+|\s+$/g, '') || 'about:blank';
+        forEach(previewAnchor, function(previewAnchor) { previewAnchor.setAttribute('href', href); });
+        forEach(previewAnchor, function(previewAnchor) { previewAnchor.setAttribute('title', 'Click to go to ' + href); });
+    }
+    if (input == null || input.name == 'image') {
+        var src = generateForm.image.value.replace(/^\s+|\s+$/g, '') || 'about:blank';
+        forEach(previewImage, function(previewImage) { previewImage.setAttribute('src', src); });
+    }
+    if (input == null || input.name == 'align') {
+        var aligns = generateForm.align;
+        var value = '';
+        for (var i = 0; i < aligns.length; i++) {
+            if (aligns[i].checked) {
+                value = aligns[i].value;
+                break;
+            }
+        }
+        forEach(previewAnchor, function(previewAnchor) { previewAnchor.style.textAlign = value; });
+    }
+    if (input == null || input.name == 'width' || input.name == 'width_auto') {
+        if (generateForm.width_auto.checked) {
+            forEach(previewImage, function(previewImage) { previewImage.style.width = 'auto'; });
+        }
+        else {
+            forEach(previewImage, function(previewImage) { previewImage.style.width = generateForm.width.value + '%'; });
+        }
+    }
+    if (input == null || input.name == 'top') {
+        forEach(previewImage, function(previewImage) { previewImage.style.marginTop = generateForm.top.value + '%'; });
+    }
+    if (input == null || input.name == 'color') {
+        var color = input ? input.value : generateForm.color[0].value;
+        forEach(previewAnchor, function(previewAnchor) { previewAnchor.style.backgroundColor = color;  });
+        if (input == generateForm.color[0]) {
+            generateForm.color[1].value = previewAnchor[0].style.backgroundColor;
+        }
+        if (input == generateForm.color[1]) {
+            generateForm.color[0].value = previewAnchor[0].style.backgroundColor;
+        }
+    }
+}
+
+var template = [
+    '<html>',
+    '<head>',
+    '<title>%TITLE%</title>',
+    '<style type="text/css">@media projection{html{display:none}}body{cursor:pointer}</style>',
+    '<script type="text/javascript">if(window.name!=\'_X_Opera_Image_Dial_Generator_\')if((screenTop||screenLeft)!=0||document.documentElement.offsetWidth==0){location.replace(\'%PAGE_URL%\')}<\/script>',
+    '<style type="text/css">@media screen, screen and (view-mode: minimized) {html,body{margin:0;padding:0;}body{background:%BGCOLOR%;text-align:%TEXT_ALIGN%;}img{width:%WIDTH%;margin-top:%MARGIN_TOP%}}</style>',
+    '</head>',
+    '<body onclick="location.replace(\'%PAGE_URL%\')"><img src="%IMAGE_URL%"></body>',
+    '</html>'
+].join('');
+
+function generateURI() {
+    var title = stripTag(generateForm.title.value);
+    var page  = escAttr(generateForm.page.value);
+    var image = escAttr(generateForm.image.value);
+    var align = previewAnchor[0].style.textAlign || 'center';
+    var width = previewImage[0].style.width || '80%';
+    var top   = previewImage[0].style.marginTop || '0';
+    var color = previewAnchor[0].style.backgroundColor || 'transparent';
+    var replaced = 
+        template.replace(/%TITLE%/g, title)
+                .replace(/%PAGE_URL%/g, page)
+                .replace(/%IMAGE_URL%/g, image)
+                .replace(/%TEXT_ALIGN%/g, align)
+                .replace(/%WIDTH%/g, width)
+                .replace(/%MARGIN_TOP%/g, top)
+                .replace(/%BGCOLOR%/g, color)
+    resultURI.value = resultLink.href = 'data:text/html;charset=utf-8,' + encodeURIComponent(replaced);
+}
+
+// -->
+</script>
+</head>
+<body>
+<h1>Opera Image Dial Generator</h1>
+<div>
+</div>
+<div class="input">
+    <h2>input parameters.</h2>
+    <form action="" id="GENERATE_FORM" onsubmit="generateURI(); return false;">
+    <fieldset>
+        <legend>necessary</legend>
+        <dl>
+        <dt>title:</dt>
+        <dd><input name="title" value="Google" size="50" onblur="updatePreview(this)"></dd>
+        <dt>page:</dt>
+        <dd><input name="page" value="http://www.google.com/" size="100" onblur="updatePreview(this)"></dd>
+        <dt>image:</dt>
+        <dd><input name="image" value="http://www.google.com/images/logo.gif" size="100" onblur="updatePreview(this)"></dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend>style</legend>
+        <dl>
+        <dt>align:</dt>
+        <dd>
+        <input name="align" type="radio" value="left" id="ALIGN_LEFT" onclick="updatePreview(this)"><label for="ALIGN_LEFT">left</label>
+        <input name="align" type="radio" value="center" id="ALIGN_CENTER" checked="checked" onclick="updatePreview(this)"><label for="ALIGN_CENTER">center</label>
+        <input name="align" type="radio" value="right" id="ALIGN_RIGHT" onclick="updatePreview(this)"><label for="ALIGN_RIGHT">right</label>
+        </dd>
+        <dt>width:</dt>
+        <dd><input name="width" type="range" min="0" max="200" value="80" step="1" onchange="this.nextSibling.textContent=this.value; updatePreview(this);"><span style="display:inline-block; width: 2em; text-align: right;">80</span>(%) <label><input name="width_auto" type="checkbox" onchange="updatePreview(this);">auto</label></dd>
+        <dt>top:</dt>
+        <dd><input name="top" type="range" min="0" max="100" value="20" step="1" onchange="this.nextSibling.textContent=this.value; updatePreview(this);"><span style="display:inline-block; width: 2em; text-align: right;">20</span>(%)</dd>
+        <dt>color:</dt>
+        <dd>
+            <input name="color" type="text" value="white" size="10" onchange="updatePreview(this)">
+            <input name="color" type="color" id="COLOR_PICKER" value="#ffffff" onchange="updatePreview(this)" style="display:none">
+            <script type="text/javascript">
+            (function() {
+                var color_picker = document.getElementById('COLOR_PICKER');
+                if (color_picker.type == 'color') {
+                    color_picker.style.display = '';
+                }
+            })();
+            </script>
+        </dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend>preview</legend>
+        <div class="preview_box">
+            <div class="preview_view" id="PREVIEW_VIEW"><a id="PREVIEW_ANCHOR" href="about:blank" target="_blank" title="Click to go to about:blank "><img id="PREVIEW_IMAGE" src="about:blank" alt=""></a></div>
+            <span class="preview_title" id="PREVIEW_TITLE"></span>
+        </div>
+        <div class="preview_box preview_box2">
+            <div class="preview_view" id="PREVIEW_VIEW2"><a id="PREVIEW_ANCHOR2" href="about:blank" target="_blank" title="Click to go to about:blank "><img id="PREVIEW_IMAGE2" src="about:blank" alt=""></a></div>
+            <span class="preview_title" id="PREVIEW_TITLE2"></span>
+        </div>
+    </fieldset>
+    <p><input type="submit" value="generate"></p>
+    </form>
+</div>
+<div class="result">
+    <h2>result URI.</h2>
+    <p><textarea id="RESULT_URI" onfocus="this.select()"></textarea></p>
+    <p><a id="RESULT_LINK" target="_X_Opera_Image_Dial_Generator_">result link.</a></p>
+</div>
+</body>
+</html>
