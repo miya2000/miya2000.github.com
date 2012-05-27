@@ -46,6 +46,7 @@ body {
 }
 .preview_box .preview_view a img {
     border: none;
+    position: relative;
 }
 .preview_box .preview_title {
     position: absolute;
@@ -57,11 +58,10 @@ body {
     font-size: 15px;
 }
 
-/* preview_box2 */
+/* preview_box2 (Opera11) */
 .preview_box2 {
     width: 368px;
     height: 260px;
-    background-color: transparent;
     border-style: solid;
     border-width: 1px;
     border-color: #9C9FA6;
@@ -79,7 +79,6 @@ body {
 .preview_box2:hover .preview_title {
     color: #FFFFFF;
 }
-
 .preview_box2 .preview_view {
     top: 0px;
     left: 0px;
@@ -101,6 +100,33 @@ body {
     bottom: 6px;
 }
 
+/* preview_box3 (Opera Mobile12) */
+.preview_box3 {
+    width: 368px;
+    height: 260px;
+    background: transparent;
+    border: none;
+}
+.preview_box3 .preview_view {
+    top: 0px;
+    left: 0px;
+    width: 242px;
+    height: 242px;
+    opacity: 1;
+    border: #B0B0B0 solid 1px;
+    background: #F7F3F7;
+    overflow: hidden;
+}
+.preview_box3 .preview_view:hover {
+    border: #CCC solid 1px;
+}
+.preview_box3 .preview_view a {
+    width: 242px;
+    height: 242px;
+}
+.preview_box3 .preview_title {
+    display: none;
+}
 </style>
 <script type="text/javascript">
 <!-- 
@@ -144,9 +170,9 @@ var resultURI     = null;
 var resultLink    = null;
 function keepElement() {
     generateForm  = document.getElementById('GENERATE_FORM');
-    previewAnchor = [document.getElementById('PREVIEW_ANCHOR'), document.getElementById('PREVIEW_ANCHOR2')];
-    previewImage  = [document.getElementById('PREVIEW_IMAGE'), document.getElementById('PREVIEW_IMAGE2')];
-    previewTitle  = [document.getElementById('PREVIEW_TITLE'), document.getElementById('PREVIEW_TITLE2')];
+    previewAnchor = [document.getElementById('PREVIEW_ANCHOR'), document.getElementById('PREVIEW_ANCHOR2'), document.getElementById('PREVIEW_ANCHOR3')];
+    previewImage  = [document.getElementById('PREVIEW_IMAGE'),  document.getElementById('PREVIEW_IMAGE2'),  document.getElementById('PREVIEW_IMAGE3')];
+    previewTitle  = [document.getElementById('PREVIEW_TITLE'),  document.getElementById('PREVIEW_TITLE2'),  document.getElementById('PREVIEW_TITLE3')];
     resultURI     = document.getElementById('RESULT_URI');
     resultLink    = document.getElementById('RESULT_LINK');
     previewImage.onerror = function() { if (previewImage.src != 'about:blank') { previewImage.setAttribute('src', 'about:blank'); } }
@@ -211,7 +237,10 @@ function updatePreview(input) {
         }
     }
     if (input == null || input.name == 'top') {
-        forEach(previewImage, function(previewImage) { previewImage.style.marginTop = generateForm.top.value + '%'; });
+        forEach(previewImage, function(previewImage) { previewImage.style.top = generateForm.top.value + '%'; });
+    }
+    if (input == null || input.name == 'left') {
+        forEach(previewImage, function(previewImage) { previewImage.style.left = generateForm.left.value + '%'; });
     }
     if (input == null || input.name == 'color') {
         var color = input ? input.value : generateForm.color[0].value;
@@ -230,10 +259,11 @@ var template = [
     '<head>',
     '<title>%TITLE%</title>',
     '<style type="text/css">@media projection{html{display:none}}body{cursor:pointer}</style>',
-    '<script type="text/javascript">if(window.name!=\'_X_Opera_Image_Dial_Generator_\')if((screenTop||screenLeft)!=0||document.documentElement.offsetWidth==0){location.replace(\'%PAGE_URL%\')}<\/script>',
-    '<style type="text/css">@media screen, screen and (view-mode: minimized) {html,body{margin:0;padding:0;}body{background:%BGCOLOR%;text-align:%TEXT_ALIGN%;}img{width:%WIDTH%;margin-top:%MARGIN_TOP%}}</style>',
+    '<script type="text/javascript">if(window.name!=\'_X_Opera_Image_Dial_Generator_\')if((screenTop||screenLeft)!=0||document.documentElement.offsetWidth==0||(/Opera (Mobi|Mini)/.test(navigator.userAgent)&&navigator.userAgent.indexOf(\'(X11; Linux zvav;\')<0)||navigator.userAgent.indexOf(\'(X11; Linux zbov;\')>0){location.replace(\'%PAGE_URL%\')}<\/script>',
+    '<style type="text/css">@media screen, screen and (view-mode: minimized) {html,body{margin:0;padding:0;width:100%;height:100%}body{background:%BGCOLOR%;text-align:%TEXT_ALIGN%;}img,object{position:relative;width:%WIDTH%;top:%TOP%;left:%LEFT%}}</style>',
+    '<script type="text/javascript">if(/\\(X11; Linux zvav;/.test(navigator.userAgent))document.write(\'<style type="text/css">html,body{width:244px;height:244px}</style>\');</script>',
     '</head>',
-    '<body onclick="location.replace(\'%PAGE_URL%\')"><img src="%IMAGE_URL%"></body>',
+    '<body onclick="location.replace(\'%PAGE_URL%\')"><object data="%IMAGE_URL%"></object></body>',
     '</html>'
 ].join('');
 
@@ -243,7 +273,8 @@ function generateURI() {
     var image = escAttr(generateForm.image.value);
     var align = previewAnchor[0].style.textAlign || 'center';
     var width = previewImage[0].style.width || '80%';
-    var top   = previewImage[0].style.marginTop || '0';
+    var top   = previewImage[0].style.top || '0';
+    var left  = previewImage[0].style.left || '0';
     var color = previewAnchor[0].style.backgroundColor || 'transparent';
     var replaced = 
         template.replace(/%TITLE%/g, title)
@@ -251,7 +282,8 @@ function generateURI() {
                 .replace(/%IMAGE_URL%/g, image)
                 .replace(/%TEXT_ALIGN%/g, align)
                 .replace(/%WIDTH%/g, width)
-                .replace(/%MARGIN_TOP%/g, top)
+                .replace(/%TOP%/g, top)
+                .replace(/%LEFT%/g, left)
                 .replace(/%BGCOLOR%/g, color)
     resultURI.value = resultLink.href = 'data:text/html;charset=utf-8,' + encodeURIComponent(replaced);
 }
@@ -274,7 +306,7 @@ function generateURI() {
         <dt>page:</dt>
         <dd><input name="page" value="http://www.google.com/" size="100" onblur="updatePreview(this)"></dd>
         <dt>image:</dt>
-        <dd><input name="image" value="http://www.google.com/images/logo.gif" size="100" onblur="updatePreview(this)"></dd>
+        <dd><input name="image" value="http://www.google.com/images/logo.gif" size="100" onblur="updatePreview(this)"> (http://... or <a href="http://software.hixie.ch/utilities/cgi/data/data">data:image/jpeg,...</a>)</dd>
         </dl>
     </fieldset>
     <fieldset>
@@ -289,10 +321,12 @@ function generateURI() {
         <dt>width:</dt>
         <dd><input name="width" type="range" min="0" max="200" value="80" step="1" onchange="this.nextSibling.textContent=this.value; updatePreview(this);"><span style="display:inline-block; width: 2em; text-align: right;">80</span>(%) <label><input name="width_auto" type="checkbox" onchange="updatePreview(this);">auto</label></dd>
         <dt>top:</dt>
-        <dd><input name="top" type="range" min="0" max="100" value="20" step="1" onchange="this.nextSibling.textContent=this.value; updatePreview(this);"><span style="display:inline-block; width: 2em; text-align: right;">20</span>(%)</dd>
+        <dd><input name="top" type="range" min="-100" max="100" value="29" step="1" onchange="this.nextSibling.textContent=this.value; updatePreview(this);"><span style="display:inline-block; width: 2em; text-align: right;">29</span>(%)</dd>
+        <dt>left:</dt>
+        <dd><input name="left" type="range" min="-100" max="100" value="0" step="1" onchange="this.nextSibling.textContent=this.value; updatePreview(this);"><span style="display:inline-block; width: 2em; text-align: right;">0</span>(%)</dd>
         <dt>color:</dt>
         <dd>
-            <input name="color" type="text" value="white" size="10" onchange="updatePreview(this)">
+            <input name="color" type="text" value="white" size="27" onchange="updatePreview(this)">
             <input name="color" type="color" id="COLOR_PICKER" value="#ffffff" onchange="updatePreview(this)" style="display:none">
             <script type="text/javascript">
             (function() {
@@ -314,6 +348,10 @@ function generateURI() {
         <div class="preview_box preview_box2">
             <div class="preview_view" id="PREVIEW_VIEW2"><a id="PREVIEW_ANCHOR2" href="about:blank" target="_blank" title="Click to go to about:blank "><img id="PREVIEW_IMAGE2" src="about:blank" alt=""></a></div>
             <span class="preview_title" id="PREVIEW_TITLE2"></span>
+        </div>
+        <div class="preview_box preview_box3">
+            <div class="preview_view" id="PREVIEW_VIEW3"><a id="PREVIEW_ANCHOR3" href="about:blank" target="_blank" title="Click to go to about:blank "><img id="PREVIEW_IMAGE3" src="about:blank" alt=""></a></div>
+            <span class="preview_title" id="PREVIEW_TITLE3"></span>
         </div>
     </fieldset>
     <p><input type="submit" value="generate"></p>
