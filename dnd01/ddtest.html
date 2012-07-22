@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- saved from url=(0023)http://www.hogehogefoobar.com/ -->
+<!-- ↑ for ie security zone (not exists) -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<link rel="start" title="[javascript] これからドラッグ＆ドロップを書く人のために" href="http://d.hatena.ne.jp/miya2000/20070306/p0" />
+<link rev="made" href="http://d.hatena.ne.jp/miya2000/" />
+<title>ドラッグ＆ドロップ テスト</title>
+<style type="text/css">
+html {
+    margin:0;
+    padding:10px;
+}
+body {
+    margin: 10px 10px 50px 10px;
+    padding: 0;
+}
+.chapter {
+    margin: 10px 30px;
+}
+.chapter:after {
+    display: block;
+    content: "";
+    height: 0; /* for opera */
+    clear: both;
+}
+.section {
+    margin: 0 30px;
+    clear: both;
+}
+h3 {
+    margin: 0;
+    padding: 20px 0 10px 0;
+}
+.box {
+    width: 112px;
+    height: 112px;
+    padding: 9px;
+    background-color: #D4D0C8;
+}
+.drag {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: black solid 1px;
+    background-color: #ABCDEF;
+    margin: 0px;
+}
+.log {
+    width: 50%;
+    margin-left: 30px;
+    padding: 5px;
+    /* 2007/03/11 パフォーマンス改善(for IE) */
+    height: 120px;
+    overflow: hidden;
+}
+.box, .log {
+    float:left;
+}
+.footnote {
+    clear: both;
+}
+h2 {
+    clear: both; /* for ie */
+    padding-top: 20px;
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: black solid 1px;
+    width: 80px;
+    text-align: right;
+    padding: 3px;
+}
+body {
+    counter-reset: chapter;
+}
+h2::before { /* ignore ie */
+    content: counter(chapter) ". ";
+    counter-increment: chapter;
+}
+.footer {
+    clear: both; /* for ie */
+    padding-top: 200px;
+}
+</style>
+<script type="text/javascript" src="domeventsupport_diet.js"></script>
+<script type="text/javascript">
+// prototype.js 
+function $(x) {
+    if (typeof x == 'string') {
+        return document.getElementById(x);
+    }
+    return x;
+};
+var Class = {
+    create: function() {
+        return function() {
+            this.initialize.apply(this, arguments);
+        }
+    }
+}
+Object.extend = function(destination, source) {
+    for (var property in source) {
+        destination[property] = source[property];
+    }
+    return destination;
+}
+</script>
+</head>
+<body>
+<h1>ドラッグ＆ドロップ テスト</h1>
+
+<div class="chapter">
+    <h2 id="simple">シンプル実装</h2>
+    <div class="box">
+        <div class="drag" id="drag1">dnd target1</div>
+    </div>
+    <div class="log">
+    <table>
+    <tr><td>message</td><td id="log1M">0</td></tr>
+    <tr><td>e.pageX</td><td id="log1X">0</td></tr>
+    <tr><td>e.pageY</td><td id="log1Y">0</td></tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    (function(){
+        window.addEventListener('load',init,false);
+        function init(){
+            var dnd = new DnDSupport1('drag1');
+            dnd.logM = 'log1M';
+            dnd.logX = 'log1X';
+            dnd.logY = 'log1Y';
+        }
+    })();
+    </script>
+</div>
+
+<div class="chapter">
+    <h2 id="downprevent">mousedown イベントで preventDefault する</h2>
+    <div class="box">
+        <div class="drag" id="drag2">dnd target2</div>
+    </div>
+    <div class="log">
+    <table>
+    <tr><td>message</td><td id="log2M">0</td></tr>
+    <tr><td>e.pageX</td><td id="log2X">0</td></tr>
+    <tr><td>e.pageY</td><td id="log2Y">0</td></tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    (function(){
+        window.addEventListener('load',init,false);
+        function init(){
+            var dnd = new DnDSupport2('drag2');
+            dnd.logM = 'log2M';
+            dnd.logX = 'log2X';
+            dnd.logY = 'log2Y';
+        }
+    })();
+    </script>
+</div>
+
+<div class="chapter">
+    <h2 id="moveprevent">IEの場合は mousemove イベントでも preventDefault する(IE以外は上と同じ)</h2>
+    <div class="box">
+        <div class="drag" id="drag3">dnd target3</div>
+    </div>
+    <div class="log">
+    <table>
+    <tr><td>message</td><td id="log3M">0</td></tr>
+    <tr><td>e.pageX</td><td id="log3X">0</td></tr>
+    <tr><td>e.pageY</td><td id="log3Y">0</td></tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    (function(){
+        window.addEventListener('load',init,false);
+        function init(){
+            var dnd = new DnDSupport3('drag3');
+            dnd.logM = 'log3M';
+            dnd.logX = 'log3X';
+            dnd.logY = 'log3Y';
+        }
+    })();
+    </script>
+</div>
+
+<div class="chapter">
+    <h2 id="imgcover">IEの場合は img を被せる(IE以外は２つ上と同じ)</h2>
+    <div class="box">
+        <div class="drag" id="drag4">dnd target4</div>
+    </div>
+    <div class="log">
+    <table>
+    <tr><td>message</td><td id="log4M">0</td></tr>
+    <tr><td>e.pageX</td><td id="log4X">0</td></tr>
+    <tr><td>e.pageY</td><td id="log4Y">0</td></tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    (function(){
+        window.addEventListener('load',init,false);
+        function init(){
+            var dnd = new DnDSupport4('drag4');
+            dnd.logM = 'log4M';
+            dnd.logX = 'log4X';
+            dnd.logY = 'log4Y';
+        }
+    })();
+    </script>
+</div>
+
+<div class="chapter">
+    <h2 id="divcover">Firefoxの場合は div を被せる(IEは上と同じ。他は３つ上と同じ)</h2>
+    <div class="box">
+        <div class="drag" id="drag5">dnd target5</div>
+    </div>
+    <div class="log">
+    <table>
+    <tr><td>message</td><td id="log5M">0</td></tr>
+    <tr><td>e.pageX</td><td id="log5X">0</td></tr>
+    <tr><td>e.pageY</td><td id="log5Y">0</td></tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    (function(){
+        window.addEventListener('load',init,false);
+        function init(){
+            var dnd = new DnDSupport5('drag5');
+            dnd.logM = 'log5M';
+            dnd.logX = 'log5X';
+            dnd.logY = 'log5Y';
+        }
+    })();
+    </script>
+    <br style="clear:both">
+    <div class="section">
+        <h3 id="divcover">画像の場合</h3>
+        <div class="box">
+            <div class="drag"><img id="drag6" src="D60_a2266a.jpg" width="100" height="100"></div>
+        </div>
+        <div class="log">
+        <table>
+        <tr><td>message</td><td id="log6M">0</td></tr>
+        <tr><td>e.pageX</td><td id="log6X">0</td></tr>
+        <tr><td>e.pageY</td><td id="log6Y">0</td></tr>
+        </table>
+        </div>
+        <p class="footnote">image src <a href="http://www.sothei.net/htm/photo/D60_a2266.htm">http://www.sothei.net/htm/photo/D60_a2266.htm</a></p>
+        <script type="text/javascript">
+        (function(){
+            window.addEventListener('load',init,false);
+            function init(){
+                var dnd = new DnDSupport5('drag6');
+                dnd.logM = 'log6M';
+                dnd.logX = 'log6X';
+                dnd.logY = 'log6Y';
+            }
+        })();
+        </script>
+    </div>
+</div>
+
+<div class="chapter">
+    <h2 id="disableselecting">IEで文字列選択中はドラッグ＆ドロップさせない</h2>
+    <div class="box">
+        <div class="drag" id="drag7">dnd target4</div>
+    </div>
+    <div class="log">
+    <table>
+    <tr><td>message</td><td id="log7M">0</td></tr>
+    <tr><td>e.pageX</td><td id="log7X">0</td></tr>
+    <tr><td>e.pageY</td><td id="log7Y">0</td></tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    (function(){
+        window.addEventListener('load',init,false);
+        function init(){
+            var dnd = new DnDSupport6('drag7');
+            dnd.logM = 'log7M';
+            dnd.logX = 'log7X';
+            dnd.logY = 'log7Y';
+        }
+    })();
+    </script>
+</div>
+
+<script type="text/javascript">
+// 1. Simple Implementation.
+(function(){
+    // Class DnDSupport (base class)
+    var DnDSupport = Class.create();
+    DnDSupport.getLocation = function(el) {
+        var x=0,y=0,p=el;
+        while(p){
+            x+=p.offsetLeft;
+            y+=p.offsetTop;
+            p=p.offsetParent;
+        }
+        return {'x':x,'y':y}
+    };
+    DnDSupport.prototype = {
+        initialize: function(element) {
+            if(!element) throw "invalid element";
+            this.element = $(element);
+            this.initStyle();
+            this.initEvent();
+        },
+        initStyle: function() {
+            this.element.style.cursor = 'move';
+        },
+        initEvent: function() {
+            var self = this;
+            var element = this.element;
+            element.addEventListener ('mousedown', function(e){ self.dragStart(e) }, false);
+            document.addEventListener('mousemove', function(e){ self.dragging (e) }, false);
+            document.addEventListener('mouseup',   function(e){ self.dragEnd  (e) }, false);
+            this.initialLocation = DnDSupport.getLocation(element);
+        },
+        dragStart: function(e) {
+            this.log('down',e);
+            this.isDragging = true;  // ドラッグ開始
+            this.currentX = e.pageX;
+            this.currentY = e.pageY;
+            // margin があると margin 分ズレていくため、0 にして調整
+            var curLoc = DnDSupport.getLocation(this.element);
+            this.element.style.position = 'absolute';
+            this.element.style.zIndex   = '1000';
+            this.element.style.margin = '0';
+            this.element.style.left = curLoc.x + 'px';
+            this.element.style.top  = curLoc.y + 'px';
+        },
+        dragging: function(e) {
+            // ドラッグが始まってなければ終了
+            if( ! this.isDragging ) return;
+            this.log('move',e);
+
+            var currentLocation = DnDSupport.getLocation(this.element);
+            var nextX = currentLocation.x + (e.pageX-this.currentX),
+                nextY = currentLocation.y + (e.pageY-this.currentY);
+
+            this.element.style.left = nextX + 'px';
+            this.element.style.top  = nextY + 'px';
+
+            this.currentX = e.pageX;
+            this.currentY = e.pageY;
+            // for Opera.(redraw)
+            if(window.opera){
+                this.element.style.display = 'none';
+                this.element.style.display = '';
+            }
+        },
+        dragEnd: function(e) {
+            if( ! this.isDragging ) return;
+            this.log('up',e);
+            this.isDragging=false;
+            this.element.style.zIndex='1';
+            // 元の位置に戻す(optional)
+            this.element.style.left = this.initialLocation.x + 'px';
+            this.element.style.top  = this.initialLocation.y + 'px';
+        },
+        log: function(msg,e) {
+            if( this.logM ) $(this.logM).innerHTML = msg;
+            if(e) {
+                if( this.logX ) $(this.logX).innerHTML = e.pageX;
+                if( this.logY ) $(this.logY).innerHTML = e.pageY;
+            }
+        }
+    }
+    // publish
+    window.DnDSupport = DnDSupport;
+    window.DnDSupport1 = DnDSupport;
+})();
+// 2. mousedown event preventDefault.
+(function(){
+    var DnDSupport2 = Class.create();
+    Object.extend( DnDSupport2.prototype, DnDSupport1.prototype );
+    var super_dragStart = DnDSupport2.prototype.dragStart;
+    DnDSupport2.prototype.dragStart = function(e) {
+        super_dragStart.apply(this,arguments);
+        if( this.isDragging ) {
+            e.preventDefault();
+        }
+    }
+    // publish
+    window.DnDSupport2 = DnDSupport2;
+})();
+// 3. mousemove event preventDefault.
+(function(){
+    var DnDSupport3 = Class.create();
+    Object.extend( DnDSupport3.prototype, DnDSupport2.prototype );
+    var super_dragging = DnDSupport3.prototype.dragging;
+    DnDSupport3.prototype.dragging = function(e) {
+        super_dragging.apply(this,arguments);
+        if( this.isDragging ) {
+            e.preventDefault();
+        }
+    }
+    // publish
+    var isIE = !!window.ActiveXObject;
+    if (isIE) {
+        window.DnDSupport3 = DnDSupport3;
+    }
+    else {
+        window.DnDSupport3 = DnDSupport2;
+    }
+})();
+// 4. image cover. (for ie)
+(function(){
+    var DnDSupport4 = Class.create();
+    Object.extend( DnDSupport4.prototype, DnDSupport3.prototype );
+    DnDSupport4.prototype.createCover = function(){
+        var t = document.createElement('img');
+        with(t.style){
+            width = '0';
+            height = '0';
+            zIndex = '10000';
+            position = 'absolute';
+            cursor = 'move';
+            /* 実際は opacity=0 にする */
+            backgroundColor = 'red';
+            filter = 'alpha(opacity=30)';
+        }
+        return t;
+    };
+    DnDSupport4.prototype.initEvent = function() {
+        // 被せる要素を作成
+        var cover = this.createCover();
+        document.body.appendChild(cover);
+        
+        var self = this;
+        var element = this.element;
+        // ドラッグ対象要素の上にマウスが乗った時に被せる
+        element.addEventListener('mouseover',function(e){
+            var loc = DnDSupport.getLocation(element);
+            cover.style.left   = loc.x + 'px';
+            cover.style.top    = loc.y + 'px';
+            cover.style.width  = element.offsetWidth + 'px';
+            cover.style.height = element.offsetHeight + 'px';
+        },false);
+        // ドラッグ対象の代わりにドラッグ開始イベントを登録
+        cover.addEventListener ('mousedown', function(e){ self.dragStart(e) }, false);
+        document.addEventListener('mousemove', function(e){ self.dragging (e) }, false);
+        document.addEventListener('mouseup',   function(e){ self.dragEnd  (e) }, false);
+        this.initialLocation = DnDSupport.getLocation(element);
+        this.cover = cover;
+    };
+    var super_dragEnd = DnDSupport4.prototype.dragEnd;
+    DnDSupport4.prototype.dragEnd = function() {
+        super_dragEnd.apply(this,arguments);
+        // 移動先に被せる（移動中は被せて無くてもOK）
+        var loc = DnDSupport.getLocation(this.element);
+        this.cover.style.left = loc.x + 'px';
+        this.cover.style.top  = loc.y + 'px';
+    };
+    // publish
+    var isIE = !!window.ActiveXObject;
+    if (isIE) {
+        window.DnDSupport4 = DnDSupport4;
+    }
+    else {
+        window.DnDSupport4 = DnDSupport3;
+    }
+    // publish for 「5. div cover.」
+    window.DnDSupport4for5 = DnDSupport4;
+})();
+// 5. div cover. (for ff)
+(function(){
+    var DnDSupport5 = Class.create();
+    Object.extend( DnDSupport5.prototype, DnDSupport4for5.prototype );
+    DnDSupport5.prototype.createCover = function(){
+        var t = document.createElement('div');
+        with(t.style){
+            width = '0';
+            height = '0';
+            zIndex = '10000';
+            position = 'absolute';
+            cursor = 'move';
+            display = 'block';
+            overflow = 'hidden';
+            /* 実際は backgroundColor='transparent' にする */
+            backgroundColor = 'red';
+            opacity = '0.3';
+        }
+        // 空 div だといかんらしい。
+        t.innerHTML = '<div style="display:block;background-color:transparent"><\/div>';
+        return t;
+    };
+    // publish
+    var isFF = /Gecko\//i.test(navigator.userAgent);
+    if (isFF) {
+        window.DnDSupport5 = DnDSupport5;
+    }
+    else {
+        window.DnDSupport5 = DnDSupport4;
+    }
+})();
+// 6. disable drag & drop while selecting text. (for ie)
+(function(){
+    var DnDSupport6 = Class.create();
+    Object.extend( DnDSupport6.prototype, DnDSupport5.prototype );
+    var super_dragStart = DnDSupport6.prototype.dragStart;
+    DnDSupport6.prototype.dragStart = function(){
+        if ( document.selection.createRange().text.length > 0 ) {
+            this.isDragging = false;
+            return;
+        }
+        super_dragStart.apply(this,arguments);
+    };
+    // publish
+    var isIE = !!window.ActiveXObject;
+    if (isIE) {
+        window.DnDSupport6 = DnDSupport6;
+    }
+    else {
+        window.DnDSupport6 = DnDSupport5;
+    }
+})();
+</script>
+<div class="footer">
+-- 以上 --
+</div>
+</body>
+</html>
